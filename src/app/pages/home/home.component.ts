@@ -9,18 +9,14 @@ import { IProducts } from './models/i-products';
 })
 export class HomeComponent {
 
-  product!:IProducts[]
+  product!: IProducts[];
 
-  constructor(private homeService:HomeService){}
+  constructor(private homeService: HomeService) {}
 
-  ngOnInit(){
-
-    this.homeService.getAllProducts().subscribe(products =>{
-
-      this.product = products
-
-    })
-
+  ngOnInit() {
+    this.homeService.getAllProducts().subscribe(products => {
+      this.product = products;
+    });
   }
 
 }
