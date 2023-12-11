@@ -11,6 +11,7 @@ import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { ProdottoComponent } from './pages/prodotto/prodotto.component';
 import { FormComponent } from './pages/form/form.component';
 import { CartComponent } from './components/cart/cart.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CartComponent } from './components/cart/cart.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
