@@ -22,26 +22,17 @@
 
 
 
-    <div class="row" *ngFor="let p of product">
-      <div class="col-12 col-md-6 col-lg-4" >
 
-        <div class="position-absolute my-5" >
-          <h2>
-            <div class="card text-bg-dark position-relative">
-              <img
-                src={{p.img}}
-                class="card-img"
-                alt="immagine-prodotto">
-              <div class="card-img-overlay cardOverlay">
-                <button class="position-absolute" routerLink="/prodotto">
-                  SCOPRI DI PIÙ
-                </button>
-              </div>
-            </div>
-          </h2>
-        </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of product">
+        <img src="{{ p.img }}" class="img-fluid" alt="immagine-prodotto">
       </div>
+      <div class="card-img-overlay cardOverlay">
+        <button class="position-absolute" >
+          SCOPRI DI PIÙ
+        </button>
     </div>
+  </div>
+
 
   </div>
-</div>
