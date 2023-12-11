@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Marketplace</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleShowNav()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': showNav}">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/preferiti">Preferiti</a>
+        </li>
+        <li class="nav-item">
+          <div class="d-flex justify-content-between align-items-center">
+            <button class="btn btn-primary">{{isLogged ? "LOGOUT" : "LOGIN"}}</button>
+
+            <button class="nav-link d-lg-none" (click)="toggleAll()">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profilo/1" *ngIf="isLogged">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Cerca</button>
+      </form>
+      <button class="nav-link d-none d-lg-block" (click)="toggleAll()">
+        <i class="fa-solid fa-cart-shopping  mt-3 mt-lg-0 ms-lg-2"></i>
+      </button>
+    </div>
+  </div>
+</nav>
