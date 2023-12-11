@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProducts } from './models/i-products';
+import { IProducts } from './app/pages/home/models/i-products';
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +14,9 @@ export class HomeService {
    return  this.http.get<IProducts[]>(this.prodUrl)
   }
 
+  getProductsById(id:number):Observable<IProducts>{
+
+    return this.http.get<IProducts>(`${this.prodUrl}/${id}`)
+
+  }
 }
