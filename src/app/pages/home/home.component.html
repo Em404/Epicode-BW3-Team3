@@ -23,15 +23,15 @@
 
 
 
-    <div class="row">
+    <div class="row my-3">
       <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of product">
         <img src="{{ p.img }}" class="img-fluid" alt="immagine-prodotto">
+        <div class="card-img-overlay cardOverlay position-relative">
+          <button class="position-absolute" >
+            SCOPRI DI PIÙ
+          </button>
       </div>
-      <div class="card-img-overlay cardOverlay">
-        <button class="position-absolute" >
-          SCOPRI DI PIÙ
-        </button>
-    </div>
+      </div>
   </div>
 
 
