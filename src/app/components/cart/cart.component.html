@@ -3,5 +3,17 @@
     <div class="position-absolute close-icon-div" (click)="toggleShowCart()">
       <i class="fa-solid fa-xmark"></i>
     </div>
-  </div>
-</div>
+    <div class="cart-content">
+
+      <div *ngFor="let prod of cart">
+        <div class="container-img">
+          <img [src]="prod.img" alt="{{prod.titolo}}" class="img-fluid">
+        </div>
+        <p>{{ prod.titolo }} Total Price: {{ prod.totalPrice }}</p>
+        <div >
+          <select >
+            <option *ngFor="let quantity of getSelect(prod.quantita)" [value]="quantity">{{ quantity }}</option>
+          </select>
+        </div>
+        <a (click)="remove()">Rimuovi dal carrello</a>
+      </div>

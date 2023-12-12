@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProducts } from '../home/models/i-products';
-import { HomeService } from '../../../home.service';
+import { HomeService } from '../home/home.service';
 import { HeaderService } from '../../components/header/header.service';
 import { Subscription } from 'rxjs';
 import Swal from 'sweetalert2';
+import { CartService } from '../../components/cart/cart.service';
 
 @Component({
   selector: 'app-prodotto',
@@ -13,24 +14,23 @@ import Swal from 'sweetalert2';
 })
 export class ProdottoComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private homeService: HomeService, private headerService: HeaderService, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private homeService: HomeService,
+    private headerService: HeaderService,
+    private router: Router,
+    private cartService:CartService
+     ) {}
+
   showNav: boolean = false;
   showCart!: boolean;
   preferiti: IProducts[] = [];
-  prodotto: IProducts = {
-    img: '',
-    titolo: '',
-    descrizione: '',
-    prezzo: 0,
-    quantita: 0,
-    id: 0
-  }
+  prodotto!: IProducts
 
   ngOnInit() {
     this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
-
     const prefLocal = localStorage.getItem('preferiti');
     if (prefLocal) {
       this.preferiti = JSON.parse(prefLocal);
@@ -41,11 +41,12 @@ export class ProdottoComponent implements OnInit {
         if (res.quantita > 0) {
           this.prodotto = res;
         } else {
-           Swal.fire('Questo prodotto non è più disponibile')
-           this.router.navigate([''])
+          Swal.fire('Questo prodotto non è più disponibile');
+          this.router.navigate(['']);
         }
-      })
+      });
     });
+
 
 
   }
@@ -63,9 +64,7 @@ export class ProdottoComponent implements OnInit {
     this.toggleShowCart();
   }
 
-    addToCart(){
 
-    }
   addToFavourite(): any {
     const isPresent = this.preferiti.some((p) => p.id === this.prodotto.id)
 
@@ -86,4 +85,9 @@ export class ProdottoComponent implements OnInit {
       });
     }
   }
+
+  addToCart(){
+    this.cartService.addToCart(this.prodotto)
+  }
+
 }

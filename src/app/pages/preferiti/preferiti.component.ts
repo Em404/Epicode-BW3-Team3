@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from '../../../home.service';
+import { HomeService } from '../home/home.service';
 import { IProducts } from '../home/models/i-products';
 import { Subscription } from 'rxjs';
 import Swal from 'sweetalert2';
