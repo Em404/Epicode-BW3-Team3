@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IProducts } from '../home/models/i-products';
 import { HomeService } from '../../../home.service';
 import { HeaderService } from '../../components/header/header.service';
-import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-prodotto',

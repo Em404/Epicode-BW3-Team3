@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { ProdottoComponent } from './pages/prodotto/prodotto.component';
+import { FormComponent } from './pages/form/form.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,11 @@ const routes: Routes = [
   },
   {
     path:"prodotto/:id",
-    component:ProdottoComponent
+    component:ProdottoComponent,
+  },
+  {
+    path:"form",
+    component:FormComponent,
   }
 ];
 

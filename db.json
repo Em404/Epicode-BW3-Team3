@@ -1,24 +1,21 @@
 {
-  "users": [ ],
-  "prodotti":[
-  {
-    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
-    "titolo": "PlayStation",
-    "descrizione": "Ultima Generazione",
-    "prezzo": 500 ,
-    "quantità": 999,
-    "id":0
-  },
-  {
-    "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
-    "titolo": "PlayStation",
-    "descrizione": "Ultima Generazione",
-    "prezzo": 500 ,
-    "quantità": 999,
-    "id":1
-  }
-
-
-
+  "users": [],
+  "prodotti": [
+    {
+      "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+      "titolo": "PlayStation",
+      "descrizione": "Ultima Generazione",
+      "prezzo": 500,
+      "quantità": 999,
+      "id": 0
+    },
+    {
+      "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
+      "titolo": "PlayStation",
+      "descrizione": "Ultima Generazione",
+      "prezzo": 500,
+      "quantità": 999,
+      "id": 1
+    }
   ]
 }
