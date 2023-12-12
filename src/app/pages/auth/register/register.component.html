@@ -28,7 +28,7 @@
             <input ngModel #email="ngModel" name="email" type="email" class="form-control" required [pattern]="emailRegex" [ngClass]="{'error': emailExisting}" (click)="resetEmail()">
             <label for="floatingInput" id="email-error" [ngClass]="{'error': emailExisting}">Email*</label>
           </div>
-          <p class="mb-1 position-relative error" *ngIf="!emailExisting">Email già registrata</p>
+          <p class="mb-1 position-relative error" *ngIf="emailExisting">Email già registrata</p>
         </div>
         <div class="col col-12 col-md-6">
           <div class="form-floating mb-2">

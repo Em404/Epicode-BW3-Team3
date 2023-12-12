@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "pippo@pluto.it",
+      "password": "$2a$10$Rl.X/chr3C71wxNn8ImhJOZGFVnQlNE8CO0g152jjapI661eLjA5y",
+      "nome": "pippo",
+      "cognome": "pluto",
+      "username": "pippopluto",
+      "data-di-nascita": "1212-12-12",
+      "genere": "web-developer",
+      "id": 1
+    }
+  ],
   "prodotti": [
     {
       "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",

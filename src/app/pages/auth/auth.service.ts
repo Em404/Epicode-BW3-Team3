@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Ilogin } from './models/ilogin';
 import { BehaviorSubject, Subject, Observable, tap, catchError, throwError } from 'rxjs';
+import { IAccessData } from './models/i-access-data';
 
 @Injectable({
   providedIn: 'root'
@@ -36,12 +37,12 @@ export class AuthService {
     this.restoreUser()
   }
 
-  login(obj: Ilogin): Observable<any> {
-    return this.http.post(this.loginUrl, obj)
+  login(obj: Ilogin): Observable<IAccessData> {
+    return this.http.post<IAccessData>(this.loginUrl, obj)
     .pipe(tap(data => {
       this.authSubject.next(data)
       localStorage.setItem('accessData', JSON.stringify(data))
-      // this.autoLogout(data.accessData)
+      this.autoLogout(data.accessToken)
     }),
     catchError(error => {
       this.stopLoading()
