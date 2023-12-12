@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class PreferitiComponent {
 
   preferiti:IProducts[] = []
-  subscribe!:Subscription
+
   constructor(private homeService:HomeService, private router:Router){}
 ngOnInit(){
   this.getAllFavourites()
@@ -26,11 +26,11 @@ ngOnInit(){
       }else{
         Swal.fire({
           position: "top-end",
-          icon: "success",
+          icon: "warning",
           title: "La pagina è vuota",
           text: "Aggiungi un prodotto ai preferiti",
           showConfirmButton: false,
-          timer: 1500
+          timer: 2500
         });
         this.router.navigate([''])
       }

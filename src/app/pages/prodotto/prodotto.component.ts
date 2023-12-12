@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProducts } from '../home/models/i-products';
 import { HomeService } from '../../../home.service';
@@ -11,13 +11,13 @@ import Swal from 'sweetalert2';
   templateUrl: './prodotto.component.html',
   styleUrl: './prodotto.component.scss'
 })
-export class ProdottoComponent {
+export class ProdottoComponent implements OnInit {
 
-  constructor(private route:ActivatedRoute, private homeService:HomeService, private headerService:HeaderService, private router:Router ){}
-  showNav:boolean = false;
-  showCart!:boolean;
-
-  prodotto:IProducts = {
+  constructor(private route: ActivatedRoute, private homeService: HomeService, private headerService: HeaderService, private router: Router) {}
+  showNav: boolean = false;
+  showCart!: boolean;
+  preferiti: IProducts[] = [];
+  prodotto: IProducts = {
     img: '',
     titolo: '',
     descrizione: '',
@@ -26,37 +26,52 @@ export class ProdottoComponent {
     id: 0
   }
 
-ngOnInit(){
-  this.headerService.showCart$.subscribe(data => {
+  ngOnInit() {
+    this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
 
-  this.route.params.subscribe((params:any)=>{
-    this.homeService.getProductsById(params.id).subscribe((res) =>{
-      this.prodotto = res ;
-    })
-  })
+    const prefLocal = localStorage.getItem('preferiti');
+    if (prefLocal) {
+      this.preferiti = JSON.parse(prefLocal);
+    }
 
-}
-toggleShowNav():void{
-  this.showNav = !this.showNav;
-}
+    this.route.params.subscribe((params: any) => {
+      this.homeService.getProductsById(params.id).subscribe((res) => {
+        this.prodotto = res;
+      })
+    });
+  }
 
-toggleShowCart():void{
-  this.headerService.toggleShowCart(this.showCart);
-}
+  toggleShowNav(): void {
+    this.showNav = !this.showNav;
+  }
 
-toggleAll():void{
-  this.toggleShowNav();
-  this.toggleShowCart();
-}
+  toggleShowCart(): void {
+    this.headerService.toggleShowCart(this.showCart);
+  }
 
+  toggleAll(): void {
+    this.toggleShowNav();
+    this.toggleShowCart();
+  }
 
-addToFavourite(){
-  this.homeService.addToFavourite(this.prodotto).subscribe(prod =>{
-    Swal.fire(`Hai aggiunto ${this.prodotto.titolo} ai tuoi preferiti`)}
-  )
-}
+  addToFavourite(): any {
+    const isPresent = this.preferiti.some((p) => p.id === this.prodotto.id)
 
-
+    if (isPresent) {
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${this.prodotto.titolo} è gia nei preferiti`,
+        denyButtonText: `Ok`
+      });
+    } else {
+      return this.homeService.addToFavourite(this.prodotto).subscribe(prod => {
+        this.preferiti.push(this.prodotto);
+        localStorage.setItem('preferiti', JSON.stringify(this.preferiti))
+        Swal.fire(`Hai aggiunto ${this.prodotto.titolo} ai tuoi preferiti`)
+      });
+    }
+  }
 }
