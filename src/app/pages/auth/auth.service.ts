@@ -15,10 +15,10 @@ export class AuthService {
   jwtHelper: JwtHelperService = new JwtHelperService()
 
   authSubject = new BehaviorSubject<any | null>(null)
-  errorSubject = new Subject<Boolean>()
-  wrongPasswordSubject = new Subject<Boolean>()
-  notExistingUserSubject = new Subject<Boolean>()
-  loadingSubject = new Subject<Boolean>()
+  errorSubject = new Subject<boolean>()
+  wrongPasswordSubject = new Subject<boolean>()
+  notExistingUserSubject = new Subject<boolean>()
+  loadingSubject = new Subject<boolean>()
 
   user$ = this.authSubject.asObservable()
   error$ = this.errorSubject.asObservable()
