@@ -13,6 +13,7 @@ import { FormComponent } from './pages/form/form.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditComponent } from './pages/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     PreferitiComponent,
     ProdottoComponent,
     FormComponent,
-    CartComponent
+    CartComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,12 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    title: "Login",
+    title: "Login | Marketplace",
   },
   {
     path: 'register',
     component: RegisterComponent,
-    title: "Register",
+    title: "Register | Marketplace",
   },
 ];
 
