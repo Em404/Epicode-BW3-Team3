@@ -20,19 +20,28 @@
     </div>
 
 
+    <div class="row my-3 position-relative">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of styleProduct;let i=index">
+        <div class="position-relative">
+          <img src= '{{ p.img }}' class="img-fluid  rounded-3" alt="immagine-prodotto" [ngClass]="{'blur': p.hover}">
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <button (mouseover)="onButtonMouseOver(i)" (mouseout)="onButtonMouseOut(i)" class="button-transparent text-light">
+              SCOPRI DI PIÙ
+            </button>
 
-
-
-    <div class="row my-3">
-      <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of product">
-        <img src="{{ p.img }}" class="img-fluid" alt="immagine-prodotto">
-        <div class="card-img-overlay cardOverlay position-relative">
-          <button class="position-absolute" >
-            SCOPRI DI PIÙ
-          </button>
+          </div>
+        </div>
+        <div class="desc">
+        <span>{{p.titolo}}</span>
+        <span class="ms-1">{{p.prezzo}}$</span>
       </div>
       </div>
-  </div>
+
+    </div>
+
+
+
+
 
 
   </div>

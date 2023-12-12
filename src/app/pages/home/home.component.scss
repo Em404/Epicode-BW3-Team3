@@ -5,14 +5,25 @@
     left: 36%;
 }
 .button-transparent {
-  background-color: transparent;
+  background-color:black;
+  opacity:0.8;
+  border-radius: 20px;
+  padding: 10px 10px;
   border: none;
-  color: #ffffff; /* Colore del testo */
-  font-size: 16px; /* Dimensione del testo */
+
+  font-size: 12px;
+  font-weight: bolder;
+
   cursor: pointer;
   outline: none;
 }
 
 .button-transparent:hover {
-  text-decoration: underline; /* Sottolinea il testo al passaggio del mouse (opzionale) */
+  text-decoration: none;
+}
+.blur {
+  filter: blur(5px);
+}
+.desc{
+  font-weight: bold;
 }
