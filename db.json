@@ -8,7 +8,9 @@
       "prezzo": 500,
       "quantità": 999,
       "id": 0
-    },
+    }
+  ],
+  "preferiti": [
     {
       "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/d1/10/30/getlstd-property-photo.jpg?w=1200&h=-1&s=1",
       "titolo": "PlayStation",
