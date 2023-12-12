@@ -13,6 +13,7 @@ import { CartService } from '../../components/cart/cart.service';
   styleUrl: './prodotto.component.scss'
 })
 export class ProdottoComponent implements OnInit {
+  cart: IProducts[] = []
 
   constructor(
     private route: ActivatedRoute,

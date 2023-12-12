@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HeaderService } from '../header/header.service';
-import { ActivatedRoute } from '@angular/router';
 import { CartService } from './cart.service';
 import { IProducts } from '../../pages/home/models/i-products';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -18,29 +19,31 @@ export class CartComponent {
 
   constructor(
     private headerService:HeaderService,
-    private route:ActivatedRoute,
-    private cartService:CartService
+    private cartService:CartService,
+    private router:Router
     ){}
 
   ngOnInit(){
-    this.cartService.cart$.subscribe((data)=> {
-      this.cart = data
-      this.showCart = data.length > 0
-    })
+
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
 
   }
 
-  remove(){}
 
-  getSelect(quantity: number): number[] {
-    for (let i = 1; i <= quantity; i++) {
-      this.result.push(i);
-    }
-    return this.result;
+  add(prod:IProducts){
+this.cartService.addToCart(prod)
   }
+  cestina(prod:IProducts){
+    this.cartService.removeOneProduct(prod)
+  }
+
+  remove(id:number ){
+  this.cartService.removeFromCart(id)
+  }
+
+
 
   ngOnDestroy(){
     this.showCartSubscription.unsubscribe();

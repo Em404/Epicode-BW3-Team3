@@ -9,11 +9,9 @@
         <div class="container-img">
           <img [src]="prod.img" alt="{{prod.titolo}}" class="img-fluid">
         </div>
-        <p>{{ prod.titolo }} Total Price: {{ prod.totalPrice }}</p>
-        <div >
-          <select >
-            <option *ngFor="let quantity of getSelect(prod.quantita)" [value]="quantity">{{ quantity }}</option>
-          </select>
+        <div>
+          <p class="text-white">{{ prod.titolo }} Total Price: {{ prod.totalPrice }}</p>
+          <a (click)="add(prod)" class="btn btn-success"><i class="fa-sharp fa-regular fa-plus-large"></i></a>
+          <a (click)="cestina(prod)" class="btn btn-warning"><i class="fa-solid fa-trash-plus"></i> </a>
         </div>
-        <a (click)="remove()">Rimuovi dal carrello</a>
       </div>
