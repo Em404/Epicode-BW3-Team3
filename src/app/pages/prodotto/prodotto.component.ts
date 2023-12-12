@@ -56,6 +56,9 @@ export class ProdottoComponent implements OnInit {
     this.toggleShowCart();
   }
 
+    addToCart(){
+
+    }
   addToFavourite(): any {
     const isPresent = this.preferiti.some((p) => p.id === this.prodotto.id)
 
@@ -64,8 +67,10 @@ export class ProdottoComponent implements OnInit {
         icon: "error",
         title: "Oops...",
         text: `${this.prodotto.titolo} è gia nei preferiti`,
-        denyButtonText: `Ok`
-      });
+
+
+      })
+
     } else {
       return this.homeService.addToFavourite(this.prodotto).subscribe(prod => {
         this.preferiti.push(this.prodotto);

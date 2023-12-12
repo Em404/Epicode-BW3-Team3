@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { ProdottoComponent } from './pages/prodotto/prodotto.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
   {
     path:"prodotto/:id",
     component:ProdottoComponent
-  }
+  },
+
 ];
 
 @NgModule({
