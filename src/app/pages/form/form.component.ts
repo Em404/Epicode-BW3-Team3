@@ -14,7 +14,7 @@ export class FormComponent {
         titolo: '',
         img: '',
         descrizione: '',
-        quantita: 0,
+        quantita: 1,
         prezzo: 0
     };
 
