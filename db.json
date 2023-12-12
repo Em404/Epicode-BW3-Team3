@@ -9,6 +9,16 @@
       "data-di-nascita": "1212-12-12",
       "genere": "web-developer",
       "id": 1
+    },
+    {
+      "email": "emanuele@macchiarulo.com",
+      "password": "$2a$10$nRm1b0fGqllE1X6wvBQ7ruWmkSj75McLNrXQGmsQ99EaHGSQ19NKy",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
+      "id": 2
     }
   ],
   "prodotti": [
