@@ -15,6 +15,7 @@ export class AuthService {
   jwtHelper: JwtHelperService = new JwtHelperService()
 
   authSubject = new BehaviorSubject<any | null>(null)
+  isLoggedSubject = new Subject<boolean>()
   errorSubject = new Subject<boolean>()
   wrongPasswordSubject = new Subject<boolean>()
   notExistingUserSubject = new Subject<boolean>()
@@ -22,6 +23,7 @@ export class AuthService {
 
   user$ = this.authSubject.asObservable()
   error$ = this.errorSubject.asObservable()
+  isLogged$ = this.isLoggedSubject.asObservable();
   loading$ = this.loadingSubject.asObservable()
   wrongPassword$ = this.wrongPasswordSubject.asObservable()
   notExistingUser$ = this.notExistingUserSubject.asObservable()
