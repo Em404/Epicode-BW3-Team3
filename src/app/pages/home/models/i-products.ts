@@ -3,6 +3,6 @@ export interface IProducts {
   titolo: string;
   descrizione:string;
   prezzo:number;
-  quantità:number;
+  quantita:number;
   id:number;
 }

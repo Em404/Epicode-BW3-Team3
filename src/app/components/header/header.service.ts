@@ -12,4 +12,5 @@ export class HeaderService {
   toggleShowCart(bool:boolean):void{
     this.showCartSubject.next(!bool);
   }
+
 }

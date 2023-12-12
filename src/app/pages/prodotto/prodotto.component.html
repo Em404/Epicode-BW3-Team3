@@ -1,1 +1,13 @@
-<p>prodotto works!</p>
+
+
+<div class="card text-end">
+  <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}">
+    <h5 class="card-title">{{prodotto.titolo}}</h5>
+    <p class="card-text">{{prodotto.descrizione}}</p>
+    <p class="card-text">{{prodotto.prezzo}}</p>
+    <p class="card-text">Sono rimaste solo {{prodotto.quantita}} disponibili di {{prodotto.titolo}}</p>
+
+    <a (click)="toggleAll()" class="btn btn-primary">Aggiungi al carrello</a>
+    <a (click)="addToFavourite()" class="btn btn-primary">Aggiungi ai Preferiti</a>
+
+  </div>

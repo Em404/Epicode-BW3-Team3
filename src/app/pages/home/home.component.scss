@@ -27,3 +27,30 @@
 .desc{
   font-weight: bold;
 }
+.carosello{
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 30px;
+
+}
+.titolo-carosello{
+  font-size: 2rem;
+background-color: rgba(0, 0, 0, 0.46);
+color: white;
+padding: 10px;
+border-radius: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 30%;
+  left: 32%;
+}
+
+
+
+/* Stile del carosello per schermi superiori a 991px */
+@media (min-width: 992px) {
+  .carousel-inner{
+    margin: 0 auto;
+    max-width: 850px;
+  }
+}
