@@ -24,7 +24,11 @@ export class CartComponent {
     ){}
 
   ngOnInit(){
+    this.cartService.cart$.subscribe((data)=> {
+      this.cart = data
+      this.showCart = data.length > 0
 
+    })
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
