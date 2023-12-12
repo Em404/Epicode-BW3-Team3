@@ -4,6 +4,7 @@ import { IProducts } from '../home/models/i-products';
 import { HomeService } from '../../../home.service';
 import { HeaderService } from '../../components/header/header.service';
 import { Subscription } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-prodotto',
@@ -12,7 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class ProdottoComponent {
 
-  constructor(private route:ActivatedRoute, private homeService:HomeService, private headerService:HeaderService){}
+  constructor(private route:ActivatedRoute, private homeService:HomeService, private headerService:HeaderService, private router:Router ){}
   showNav:boolean = false;
   showCart!:boolean;
 
@@ -32,7 +33,6 @@ ngOnInit(){
 
   this.route.params.subscribe((params:any)=>{
     this.homeService.getProductsById(params.id).subscribe((res) =>{
-      console.log(res);
       this.prodotto = res ;
     })
   })
@@ -50,5 +50,13 @@ toggleAll():void{
   this.toggleShowNav();
   this.toggleShowCart();
 }
+
+
+addToFavourite(){
+  this.homeService.addToFavourite(this.prodotto).subscribe(prod =>{
+    Swal.fire(`Hai aggiunto ${this.prodotto.titolo} ai tuoi preferiti`)}
+  )
+}
+
 
 }
