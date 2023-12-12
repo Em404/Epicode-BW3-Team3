@@ -32,5 +32,4 @@ export class HomeService {
     return this.http.get<IProducts[]>(this.prefUrl)
   }
 
-
 }

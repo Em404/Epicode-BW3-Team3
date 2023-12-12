@@ -38,9 +38,16 @@ export class ProdottoComponent implements OnInit {
 
     this.route.params.subscribe((params: any) => {
       this.homeService.getProductsById(params.id).subscribe((res) => {
-        this.prodotto = res;
+        if (res.quantita > 0) {
+          this.prodotto = res;
+        } else {
+           Swal.fire('Questo prodotto non è più disponibile')
+           this.router.navigate([''])
+        }
       })
     });
+
+
   }
 
   toggleShowNav(): void {
@@ -73,7 +80,7 @@ export class ProdottoComponent implements OnInit {
 
     } else {
       return this.homeService.addToFavourite(this.prodotto).subscribe(prod => {
-        this.preferiti.push(this.prodotto);
+        this.preferiti.unshift(this.prodotto);
         localStorage.setItem('preferiti', JSON.stringify(this.preferiti))
         Swal.fire(`Hai aggiunto ${this.prodotto.titolo} ai tuoi preferiti`)
       });

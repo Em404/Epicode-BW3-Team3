@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IProducts } from '../home/models/i-products';
@@ -18,7 +19,8 @@ export class FormComponent {
         prezzo: 0
     };
 
-    constructor(private httpClient: HttpClient) {}
+    constructor(private httpClient: HttpClient, private route:ActivatedRoute) {}
+
 
     isValidUrl(url: string): boolean {
       const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocollo
