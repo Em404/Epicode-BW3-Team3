@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { CartService } from '../cart/cart.service';
 import Swal from 'sweetalert2';
 import { IProducts } from '../../pages/home/models/i-products';
+import { IUser } from '../../pages/auth/models/i-user';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +21,19 @@ export class HeaderComponent {
   isLoggedSubscription!:Subscription;
   showCartSubscription!:Subscription;
   cartSubscription!:Subscription;
+
+  user:IUser = {
+    nome: '',
+    cognome: '',
+    username: '',
+    email: '',
+    password: '',
+    genere: '',
+    data_di_nascita: 0,
+    id: 0
+  }
+
+  userSubscription!: Subscription
 
   constructor(
     private headerService:HeaderService,
@@ -37,6 +51,11 @@ export class HeaderComponent {
       this.showCart = data;
     })
 
+    this.userSubscription = this.authService.user$.subscribe(data => {
+      this.user = data.user
+      console.log(this.user);
+    })
+
     this.cartSubscription = this.cartService.cart$.subscribe((data)=> {
       this.cart = data;
     })
@@ -46,6 +65,7 @@ export class HeaderComponent {
   ngOnDestroy(){
     this.isLoggedSubscription.unsubscribe();
     this.showCartSubscription.unsubscribe();
+    this.userSubscription.unsubscribe()
   }
 
   toggleShowNav():void{

@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
 import { IUser } from '../auth/models/i-user';
 import { NgForm } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-profilo',
@@ -15,7 +17,7 @@ export class ProfiloComponent {
     private route: ActivatedRoute,
     private authService:AuthService,
     private router:Router,
-    // private http:HttpClient,
+    private http:HttpClient,
   ){}
 
   loading!:boolean;
@@ -24,13 +26,21 @@ export class ProfiloComponent {
   passwordInvalid!:boolean;
   usernameExisting!:boolean;
   emailExisting!:boolean;
-  // registerObj!:Iregister;
   error!:boolean;
 
-  // loadingSubscription!:Subscription;
-  // errorSubscription!:Subscription;
+  loadingSubscription!:Subscription;
+  errorSubscription!:Subscription;
 
-  user!:IUser
+  user:IUser = {
+    nome: '',
+    cognome: '',
+    username: '',
+    email: '',
+    password: '',
+    genere: '',
+    data_di_nascita: 0,
+    id: 0
+  }
 
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
@@ -42,11 +52,45 @@ export class ProfiloComponent {
   }
 
   update(form:NgForm) {
-    this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
+
+    const valid = form.form.value.password === form.form.value["conferma-password"];
+    if (!valid) {
+      this.passwordInvalid = true;
+      return;
+    };
+
+    this.startLoading();
+    this.http.get<IUser[]>("http://localhost:3000/users").subscribe(data => {
+      if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
+
+      if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
+
+      if (this.emailExisting || this.usernameExisting) {
+        this.stopLoading();
+        return;
+      }
+
+      const temporaryObj:any = {...form.form.value};
+      delete temporaryObj["conferma-password"];
+
+      this.user = {...temporaryObj}
+
+      console.log(this.user)
+
+      this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
+    })
   }
 
   logout() {
     this.authService.logout()
+  }
+
+  startLoading(){
+    this.authService.startLoading();
+  }
+
+  stopLoading(){
+    this.authService.stopLoading();
   }
 
 }
