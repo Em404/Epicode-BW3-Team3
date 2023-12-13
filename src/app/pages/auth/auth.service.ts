@@ -114,8 +114,12 @@ export class AuthService {
     return this.http.get<IUser>(`${this.userUrl}/${id}`)
   }
 
-  updateUserInfo(obj: IUser) {
+  updateUserInfo(obj: Partial<IUser>): Observable<IUser> {
     console.log(obj);
     return this.http.put<IUser>(this.userUrl + `/${obj.id}`,obj);
+  }
+
+  updateUser(id: number, updatedFields: Partial<IUser>): Observable<IUser> {
+    return this.http.patch<IUser>(`${this.apiUrl}/users/${id}`, updatedFields);
   }
 }

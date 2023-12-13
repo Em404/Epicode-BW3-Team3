@@ -69,7 +69,17 @@ export class ProfiloComponent {
       delete temporaryObj["conferma-password"];
       this.user = {...temporaryObj}
       console.log(this.user)
-      this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
+      this.authService.updateUserInfo(this.user).subscribe(res => {
+        this.user = res
+        this.router.navigate(['/'])
+      })
+    })
+  }
+
+  updates(id: number) {
+    this.authService.updateUser(id, this.user).subscribe(res => {
+      this.user = res
+      this.router.navigate(['/'])
     })
   }
 
