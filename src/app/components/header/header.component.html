@@ -12,6 +12,9 @@
         <li class="nav-item ms-2">
           <a class="button" routerLink="/preferiti">PREFERITI</a>
         </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" routerLink="/form">Vendi un prodotto</a>
+        </li>
         <li class="nav-item">
           <div class="d-flex justify-content-between align-items-center">
 
@@ -22,7 +25,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/profilo/1'" *ngIf="isLogged">
+          <a class="nav-link" [routerLink]="'/profilo/' + user.id" *ngIf="isLogged">
             <i class="fa-solid fa-user"></i>
           </a>
         </li>

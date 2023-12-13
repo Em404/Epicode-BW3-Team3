@@ -19,6 +19,9 @@ export class HomeComponent {
   product!: IProducts[];
   styleProduct!:any[]
   isButtonHovered:boolean=false;
+  route: any;
+  authService: any;
+  user: any;
   constructor(private homeService: HomeService) {}
 
   ngOnInit() {
