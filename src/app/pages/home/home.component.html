@@ -12,11 +12,11 @@
   </div>
 
   <div class="row my-3">
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let p of styleProduct;let i=index">
+    <div class="col-12 col-md-6 col-lg-4 d-flex align-items-center flex-column mb-3" *ngFor="let p of styleProduct;let i=index">
       <div class="position-relative img-prod text-center">
         <img src= '{{ p.img }}' class="img-fluid rounded-3 card-img-top" alt="immagine-prodotto" [ngClass]="{'blur': p.hover}">
         <div class="position-absolute top-50 start-50 translate-middle">
-          <button (mouseover)="onButtonMouseOver(i)" (mouseout)="onButtonMouseOut(i)" [routerLink]="'/prodotto/'+ p.id"  class="button-transparent text-light">
+          <button [routerLink]="'/prodotto/' + p.id" (mouseover)="onButtonMouseOver(i)" (mouseout)="onButtonMouseOut(i)" class="button-transparent text-light">
             SCOPRI DI PIÙ
           </button>
 
