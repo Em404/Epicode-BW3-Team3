@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { HeaderService } from '../header/header.service';
 import { CartService } from './cart.service';
 import { IProducts } from '../../pages/home/models/i-products';
+import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,9 +16,9 @@ export class CartComponent {
   showCartSubscription!:Subscription;
   cart:IProducts[]= []
   result: number[] = [];
-  totalProducts: number = 0;
-  totalPrice: number = 0;
-
+  totalProducts: number = 1
+  totalPrice!: number
+  isEmpty!: boolean
   constructor(
     private headerService:HeaderService,
     private cartService:CartService,
@@ -28,23 +29,24 @@ export class CartComponent {
     this.cartService.cart$.subscribe((data)=> {
       this.cart = data
       this.showCart = data.length > 0
+      this.isEmpty = this.showCart
+      this.calculateTotal()
 
     })
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
-    this.calculateTotal()
 
   }
 
 
   add(prod:IProducts){
-this.cartService.addToCart(prod)
-this.calculateTotal()
+  this.cartService.addToCart(prod)
+  this.calculateTotal()
   }
   cestina(prod:IProducts){
     this.cartService.removeOneProduct(prod)
-    this.calculateTotal
+    this.calculateTotal()
   }
 
   remove(id:number ){

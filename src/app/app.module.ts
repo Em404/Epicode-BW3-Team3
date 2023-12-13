@@ -13,7 +13,6 @@ import { FormComponent } from './pages/form/form.component';
 import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { EditComponent } from './pages/edit/edit.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -26,7 +25,6 @@ import { FooterComponent } from './components/footer/footer.component';
     ProdottoComponent,
     FormComponent,
     CartComponent,
-    EditComponent,
     FooterComponent
   ],
   imports: [
