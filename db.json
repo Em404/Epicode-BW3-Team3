@@ -37,7 +37,7 @@
       "titolo": "pizza",
       "descrizione": "pizza margherita",
       "prezzo": 5,
-      "quantita": 0,
+      "quantita": 1,
       "id": 1
     },
     {
@@ -65,5 +65,14 @@
       "id": 4
     }
   ],
-  "preferiti": []
+  "preferiti": [
+    {
+      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
+      "titolo": "pizza",
+      "descrizione": "pizza margherita",
+      "prezzo": 5,
+      "quantita": 1,
+      "id": 1
+    }
+  ]
 }
