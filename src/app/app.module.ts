@@ -14,6 +14,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EditComponent } from './pages/edit/edit.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { EditComponent } from './pages/edit/edit.component';
     ProdottoComponent,
     FormComponent,
     CartComponent,
-    EditComponent
+    EditComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
