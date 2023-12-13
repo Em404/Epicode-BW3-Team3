@@ -19,6 +19,16 @@
       "data-di-nascita": "1998-04-23",
       "genere": "web-developer",
       "id": 2
+    },
+    {
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$rc7vk4fEcaJYWS7N4n5pT.MQQwa78W8vbdvmlxU950DE0gBJUoSXm",
+      "nome": "Alessandro",
+      "cognome": "Forestiero",
+      "username": "etutor11",
+      "data-di-nascita": "1999-12-12",
+      "genere": "web-developer",
+      "id": 3
     }
   ],
   "prodotti": [
