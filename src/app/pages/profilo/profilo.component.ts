@@ -47,7 +47,6 @@ export class ProfiloComponent {
      this.authService.getUserById(params.id).subscribe((res) => {
       this.user = res;
       this.userId = params.id
-      console.log(this.user);
       })
     });
   }
@@ -58,20 +57,31 @@ export class ProfiloComponent {
       this.passwordInvalid = true;
       return;
     };
+
+    if (!form.form.value.nome) form.form.value.nome = this.user.nome;
+    if (!form.form.value.cognome) form.form.value.cognome = this.user.cognome;
+    if (!form.form.value.username) form.form.value.username = this.user.username;
+    if (!form.form.value.email) form.form.value.email = this.user.email;
+    if (!form.form.value.password) form.form.value.password = this.user.password;
+    if (!form.form.value.genere) form.form.value.genere = this.user.genere;
+    form.form.value.id = this.user.id;
+    console.log(form.form.value)
     this.startLoading();
     this.http.get<IUser[]>("http://localhost:3000/users").subscribe(data => {
-      // if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
-      // if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
-      // if (this.emailExisting || this.usernameExisting) {
-      //   this.stopLoading();
-      //   return;
-      // }
-      // const temporaryObj:any = {...form.form.value};
+      this.usernameExisting = data.some(user => user.username === form.form.value.username) && (form.form.value.username !== this.user.username)
 
-      // delete temporaryObj["conferma-password"];
-      // this.user = {...temporaryObj}
-      // console.log(this.user)
-      this.authService.updateUserInfo(form.form.value).subscribe(res => {
+      this.emailExisting = data.some(user => user.email === form.form.value.email) && (form.form.value.email !== this.user.email);
+      if (this.emailExisting || this.usernameExisting) {
+        this.stopLoading();
+        return;
+      }
+      const temporaryObj:any = {...form.form.value};
+
+      delete temporaryObj["conferma-password"];
+      this.user = {...temporaryObj}
+      console.log(this.user)
+
+      this.authService.updateUserInfo(this.user).subscribe(res => {
         console.log(res);
 
         this.user = res
@@ -79,7 +89,6 @@ export class ProfiloComponent {
       })
     })
   }
-
 
   logout() {
     this.authService.logout()
