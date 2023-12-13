@@ -60,26 +60,19 @@ export class ProfiloComponent {
     };
     this.startLoading();
     this.http.get<IUser[]>("http://localhost:3000/users").subscribe(data => {
-      // if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
-      // if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
-      // if (this.emailExisting || this.usernameExisting) {
-      //   this.stopLoading();
-      //   return;
-      // }
-      // const temporaryObj:any = {...form.form.value};
-
-      // delete temporaryObj["conferma-password"];
-      // this.user = {...temporaryObj}
-      // console.log(this.user)
-      this.authService.updateUserInfo(form.form.value).subscribe(res => {
-        console.log(res);
-
-        this.user = res
-        this.router.navigate(['/'])
-      })
+      if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
+      if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
+      if (this.emailExisting || this.usernameExisting) {
+        this.stopLoading();
+        return;
+      }
+      const temporaryObj:any = {...form.form.value};
+      delete temporaryObj["conferma-password"];
+      this.user = {...temporaryObj}
+      this.user.id = this.userId
+      this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
     })
   }
-
 
   logout() {
     this.authService.logout()
