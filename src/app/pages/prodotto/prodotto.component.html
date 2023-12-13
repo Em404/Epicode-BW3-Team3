@@ -1,15 +1,20 @@
 
-
-<div class="card text-end">
+<div class="container w-50">
+<div class="card text-center mt-5">
   <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}">
-    <h5 class="card-title">{{prodotto.titolo}}</h5>
-    <p class="card-text">{{prodotto.descrizione}}</p>
-    <p class="card-text">{{prodotto.prezzo}}</p>
-    <p class="card-text">Sono rimaste solo {{prodotto.quantita}} quantità disponibili di {{prodotto.titolo}}</p>
+    <h2 class="card-title">{{prodotto.titolo}}</h2>
+    <h4 class="card-text">{{prodotto.descrizione}}</h4>
+    <h5 class="card-text">{{prodotto.prezzo+'$'}}</h5>
+    <p class="card-text">Sono rimaste solo {{prodotto.quantita}} disponibili di {{prodotto.titolo}}</p>
+    <div>
+      <div class="d-flex align-items-center justify-content-center">
     <a (click)="toggleAll();
     addToCart()"
-     class="btn btn-primary"
+     class="btn btn-primary me-2"
      >Aggiungi al carrello
     </a>
     <a (click)="addToFavourite()" class="btn btn-primary">Aggiungi ai Preferiti</a>
   </div>
+  </div>
+  </div>
+</div>

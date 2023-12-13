@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-color border-bottom-2 border-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Marketplace</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleShowNav()">
@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': showNav}">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Home</a>
+          <a class="button" routerLink="/">HOME</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/preferiti">Preferiti</a>
+        <li class="nav-item ms-2">
+          <a class="button" routerLink="/preferiti">PREFERITI</a>
         </li>
         <li class="nav-item" *ngIf="isLogged">
           <a class="nav-link" routerLink="/form">Vendi un prodotto</a>
         </li>
         <li class="nav-item">
           <div class="d-flex justify-content-between align-items-center">
-            <button (click)="handleRedirect()" class="btn btn-primary">{{isLogged ? "LOGOUT" : "LOGIN"}}</button>
 
-            <button class="nav-link d-lg-none" (click)="toggleAll()">
+
+            <button class="nav-link d-lg-none button" (click)="toggleAll()">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
           </div>
@@ -30,10 +30,9 @@
           </a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Cerca</button>
-      </form>
+      <div class="d-flex" role="search">
+        <button (click)="handleRedirect()" class="button">{{isLogged ? "LOGOUT" : "LOGIN"}}</button>
+      </div>
       <button class="nav-link d-none d-lg-block" (click)="toggleAll()">
         <i class="fa-solid fa-cart-shopping  mt-3 mt-lg-0 ms-lg-2" ></i>
       </button>
