@@ -28,6 +28,7 @@ export class ProdottoComponent implements OnInit {
   preferiti: IProducts[] = [];
   prodotto!: IProducts
 
+
   ngOnInit() {
     this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
