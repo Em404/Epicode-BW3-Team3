@@ -1,47 +1,100 @@
 {
-  "users": [],
-  "prodotti": [
+  "users": [
     {
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "pizza margherita",
-      "prezzo": 5,
-      "quantita": 1,
+      "nome": "errgrgrg4g343g",
+      "cognome": "samuele",
+      "username": "ciao",
+      "email": "samueletoscano@hotmail.com",
+      "password": "$2a$10$q8m2MZH9OCqtXlajUndM6ecBkjRGHnzfeYEY/2S.oFi4l7/UxzW.q",
+      "genere": "uomo",
       "id": 1
     },
     {
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "dfsadfgsadg",
-      "prezzo": 0,
-      "quantita": 0,
+      "email": "samuelescano@hotmail.com",
+      "password": "$2a$10$LwJ5RcoTzihewL3eMN5SuOv8hYKZZcysA/kViIGq.HC5Oy01DiB9O",
+      "nome": "errgrgrg4g343g",
+      "cognome": "samuele",
+      "username": "ciao101010",
+      "data-di-nascita": "2023-11-29",
+      "genere": "uomo",
+      "id": 2
+    }
+  ],
+  "prodotti": [
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "kumuu",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 1
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "tth",
+      "prezzo": 32323,
+      "quantita": 2,
       "id": 2
     },
     {
-      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
-      "titolo": "michele",
-      "descrizione": "michele",
-      "prezzo": 0,
-      "quantita": 1,
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "vevre",
+      "prezzo": 32323,
+      "quantita": 2,
       "id": 3
     },
     {
-      "img": "https://scontent.fcia4-1.fna.fbcdn.net/v/t39.30808-6/277350443_258135239860378_115470771679421010_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=rpZhIoswIa8AX-c9YVR&_nc_ht=scontent.fcia4-1.fna&oh=00_AfDGfkhRjR3NIRs_FACtteIdMj2c_GLZdGiN2RHZD8LIJw&oe=657CCD1B",
-      "titolo": "gabriele",
-      "descrizione": "il capo",
-      "prezzo": 0,
-      "quantita": 0,
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "regrg",
+      "prezzo": 32323,
+      "quantita": 2,
       "id": 4
     }
   ],
-  "preferiti": [
+  "preferiti": [],
+  "prodottiUser": [
     {
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "pizza margherita",
-      "prezzo": 5,
-      "quantita": 1,
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "kumuu",
+      "prezzo": 32323,
+      "quantita": 2,
       "id": 1
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "tth",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 2
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "vevre",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 3
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "regrg",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 4
     }
   ]
 }

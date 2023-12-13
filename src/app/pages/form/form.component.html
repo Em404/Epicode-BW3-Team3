@@ -1,12 +1,12 @@
 <div class="container">
-  <form (ngSubmit)="onSubmit()" #myForm="ngForm" novalidate class="my-form">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm"  class="my-form">
 
     <div class="form-group">
       <label for="titolo">Titolo:</label>
       <input type="text" id="titolo" [(ngModel)]="model.titolo" name="titolo" required #titolo="ngModel"
         class="form-control">
       <div *ngIf="titolo.invalid && (titolo.dirty || titolo.touched)" class="error">
-        <div *ngIf="titolo.errors" class="text-danger">Il titolo è richiesto.</div>
+        <div *ngIf="titolo.errors" class="text-danger  error">Il titolo è richiesto.</div>
       </div>
     </div>
     <div class="form-group">
@@ -14,7 +14,7 @@
       <input type="url" id="immagine" [(ngModel)]="model.img" name="immagine" required #immagine="ngModel"
         class="form-control">
       <div *ngIf="immagine.invalid && (immagine.dirty || immagine.touched)" class="error">
-        <div *ngIf="immagine.errors" class="text-danger">L'URL dell'immagine è richiesto.</div>
+        <div *ngIf="immagine.errors" class="text-danger error">L'URL dell'immagine è richiesto.</div>
 
       </div>
     </div>
@@ -23,7 +23,7 @@
       <textarea id="descrizione" [(ngModel)]="model.descrizione" name="descrizione" class="form-control" required
         #descrizione="ngModel"></textarea>
       <div *ngIf="descrizione.invalid && (descrizione.dirty || descrizione.touched)" class="error">
-        <div *ngIf="descrizione.errors" class="text-danger">La descrizione è richiesta.</div>
+        <div *ngIf="descrizione.errors" class="text-danger error">La descrizione è richiesta.</div>
       </div>
     </div>
     <div class="form-group">
@@ -31,7 +31,8 @@
       <input type="number" id="quantita" [(ngModel)]="model.quantita" name="quantita" required #quantita="ngModel"
         class="form-control">
       <div *ngIf="quantita.invalid && (quantita.dirty || quantita.touched)" class="error">
-        <div *ngIf="quantita.errors" class="text-danger">La quantità è richiesta.</div>
+        <div *ngIf="quantita.errors" class="text-danger error">La quantità è richiesta.</div>
+        <div *ngIf="checkQuantita()" class="text-danger error">La quantità è troppo bassa</div>
       </div>
     </div>
     <div class="form-group">
@@ -39,10 +40,10 @@
       <input type="number" id="prezzo" [(ngModel)]="model.prezzo" name="prezzo" required #prezzo="ngModel" class="form-control
       ">
       <div *ngIf="prezzo.invalid && (prezzo.dirty || prezzo.touched)" class="error">
-        <div *ngIf="prezzo.errors" class="text-danger">Il prezzo è richiesto.</div>
+        <div *ngIf="prezzo.errors" class="text-danger error">Il prezzo è richiesto.</div>
       </div>
     </div>
-    <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary mt-3">Aggiungi</button>
+    <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary mt-3" >Aggiungi</button>
   </form>
 
 

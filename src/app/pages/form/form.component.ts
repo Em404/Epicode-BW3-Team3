@@ -1,7 +1,9 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IProducts } from '../home/models/i-products';
+import Swal from 'sweetalert2';
+import { ProdUserService } from '../../prod-user/prod-user.service';
 
 @Component({
   selector: 'app-form',
@@ -10,27 +12,37 @@ import { IProducts } from '../home/models/i-products';
 })
 
 export class FormComponent {
-    model!: IProducts;
+    model: IProducts ={
+      totalPrice: 0,
+      img: '',
+      titolo: '',
+      descrizione: '',
+      prezzo: 0,
+      quantita: 0,
+      id: 0
+    }
+    constructor(private httpClient: HttpClient, private route:ActivatedRoute, private prodUserService:ProdUserService, private router:Router) {}
+    urlImage: RegExp = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
 
-    constructor(private httpClient: HttpClient, private route:ActivatedRoute) {}
 
-
-    isValidUrl(url: string): boolean {
-      const pattern = new RegExp('^(https?:\\/\\/)?'+ // protocollo
-         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // dominio di primo livello
-         '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-         '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-         '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-      return pattern.test(url);
+    checkQuantita():boolean{
+      if ( this.model.quantita > 0) {
+       return true
+      }
+      return false
     }
 
     onSubmit() {
-      if (this.isValidUrl(this.model.img)) {
+      if (this.urlImage.test(this.model.img) && this.model.quantita > 0 ) {
           this.inviaDatiAlServer();
-      } else {
-          console.error('L\'URL dell\'immagine non è valido');
+        this.prodUserService.addToMyProduct(this.model).subscribe((data)=>{
+          Swal.fire('prodotto aggiunto correttamente')
+        })
+      } else{
+        Swal.fire(`Sistema l'url o aumenta la quantità del prodotto almeno ad 1`)
       }
+
+
     }
 
     validaDatiForm(): boolean {
@@ -41,19 +53,9 @@ export class FormComponent {
     }
 
     inviaDatiAlServer() {
-      this.httpClient.post('http://localhost:3000/prodotti', {
-          img: this.model.img,
-          titolo: this.model.titolo,
-          descrizione: this.model.descrizione,
-          prezzo: this.model.prezzo,
-          quantita: this.model.quantita
-      }).subscribe({
-          next: (response) => {
-              console.log('Prodotto aggiunto', response);
-          },
-          error: (error) => {
-              console.error('Errore durante l\'aggiunta del prodotto', error);
-          }
-        });
+      this.httpClient.post('http://localhost:3000/prodotti', this.model).subscribe((data) =>{
+    console.log(data);
+
+    });
     }
 }
