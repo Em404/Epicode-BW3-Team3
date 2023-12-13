@@ -1,8 +1,8 @@
-import { PreferitiComponent } from './app/pages/preferiti/preferiti.component';
+import { PreferitiComponent } from '../preferiti/preferiti.component';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProducts } from './app/pages/home/models/i-products';
+import { IProducts } from './models/i-products';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +31,5 @@ export class HomeService {
   getFavourite():Observable<IProducts[]>{
     return this.http.get<IProducts[]>(this.prefUrl)
   }
-
 
 }

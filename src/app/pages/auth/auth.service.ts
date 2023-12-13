@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Ilogin } from './models/ilogin';
-import { BehaviorSubject, Subject, Observable, tap, catchError, throwError } from 'rxjs';
+import { BehaviorSubject, Subject, Observable, tap, catchError, throwError, map } from 'rxjs';
+import { IAccessData } from './models/i-access-data';
 
 @Injectable({
   providedIn: 'root'
@@ -15,13 +16,14 @@ export class AuthService {
   jwtHelper: JwtHelperService = new JwtHelperService()
 
   authSubject = new BehaviorSubject<any | null>(null)
-  errorSubject = new Subject<Boolean>()
-  wrongPasswordSubject = new Subject<Boolean>()
-  notExistingUserSubject = new Subject<Boolean>()
-  loadingSubject = new Subject<Boolean>()
+  errorSubject = new Subject<boolean>()
+  wrongPasswordSubject = new Subject<boolean>()
+  notExistingUserSubject = new Subject<boolean>()
+  loadingSubject = new Subject<boolean>()
 
   user$ = this.authSubject.asObservable()
   error$ = this.errorSubject.asObservable()
+  isLogged$ = this.user$.pipe(map(user => !!user));
   loading$ = this.loadingSubject.asObservable()
   wrongPassword$ = this.wrongPasswordSubject.asObservable()
   notExistingUser$ = this.notExistingUserSubject.asObservable()
@@ -34,12 +36,12 @@ export class AuthService {
     this.restoreUser()
   }
 
-  login(obj: Ilogin): Observable<any> {
-    return this.http.post(this.loginUrl, obj)
+  login(obj: Ilogin): Observable<IAccessData> {
+    return this.http.post<IAccessData>(this.loginUrl, obj)
     .pipe(tap(data => {
       this.authSubject.next(data)
       localStorage.setItem('accessData', JSON.stringify(data))
-      // this.autoLogout(data.accessData)
+      this.autoLogout(data.accessToken)
     }),
     catchError(error => {
       this.stopLoading()

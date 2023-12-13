@@ -5,6 +5,7 @@
   z-index: 10;
   left: 100%;
   transition: all 0.5s;
+  z-index: 1;
   &.active{
     left: 0;
   }
@@ -32,3 +33,10 @@
     }
   }
 }
+
+.container-img{
+  width: 300px;
+  height: 200px;
+}
+
+

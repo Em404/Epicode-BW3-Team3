@@ -1,5 +1,26 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "pippo@pluto.it",
+      "password": "$2a$10$Rl.X/chr3C71wxNn8ImhJOZGFVnQlNE8CO0g152jjapI661eLjA5y",
+      "nome": "pippo",
+      "cognome": "pluto",
+      "username": "pippopluto",
+      "data-di-nascita": "1212-12-12",
+      "genere": "web-developer",
+      "id": 1
+    },
+    {
+      "email": "emanuele@macchiarulo.com",
+      "password": "$2a$10$nRm1b0fGqllE1X6wvBQ7ruWmkSj75McLNrXQGmsQ99EaHGSQ19NKy",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
+      "id": 2
+    }
+  ],
   "prodotti": [
     {
       "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
