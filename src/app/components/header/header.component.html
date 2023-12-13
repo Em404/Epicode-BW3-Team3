@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/preferiti">Preferiti</a>
         </li>
+        <li class="nav-item" *ngIf="isLogged">
+          <a class="nav-link" routerLink="/form">Vendi un prodotto</a>
+        </li>
         <li class="nav-item">
           <div class="d-flex justify-content-between align-items-center">
             <button (click)="handleRedirect()" class="btn btn-primary">{{isLogged ? "LOGOUT" : "LOGIN"}}</button>

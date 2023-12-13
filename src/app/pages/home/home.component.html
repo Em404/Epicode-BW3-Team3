@@ -16,7 +16,7 @@
       <div class="position-relative img-prod text-center">
         <img src= '{{ p.img }}' class="img-fluid rounded-3 card-img-top" alt="immagine-prodotto" [ngClass]="{'blur': p.hover}">
         <div class="position-absolute top-50 start-50 translate-middle">
-          <button (mouseover)="onButtonMouseOver(i)" (mouseout)="onButtonMouseOut(i)" class="button-transparent text-light">
+          <button (mouseover)="onButtonMouseOver(i)" (mouseout)="onButtonMouseOut(i)" [routerLink]="'/prodotto/'+ p.id"  class="button-transparent text-light">
             SCOPRI DI PIÙ
           </button>
 

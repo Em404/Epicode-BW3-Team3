@@ -40,6 +40,8 @@ export class ProdottoComponent implements OnInit {
 
     this.route.params.subscribe((params: any) => {
       this.homeService.getProductsById(params.id).subscribe((res) => {
+        console.log(res);
+
         if (res.quantita > 0) {
           this.prodotto = res;
         } else {

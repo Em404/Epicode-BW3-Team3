@@ -5,7 +5,6 @@ import { CartService } from './cart.service';
 import { IProducts } from '../../pages/home/models/i-products';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-import { ICart } from './cart';
 
 @Component({
   selector: 'app-cart',
@@ -17,8 +16,8 @@ export class CartComponent {
   showCartSubscription!:Subscription;
   cart:IProducts[]= []
   result: number[] = [];
-  totalProducts: number = 0;
-  totalPrice: number = 0;
+  totalProducts!: number;
+  totalPrice!: number
 
   constructor(
     private headerService:HeaderService,
@@ -46,7 +45,7 @@ this.calculateTotal()
   }
   cestina(prod:IProducts){
     this.cartService.removeOneProduct(prod)
-    this.calculateTotal
+    this.calculateTotal()
   }
 
   remove(id:number ){
