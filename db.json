@@ -27,7 +27,7 @@
       "titolo": "pizza",
       "descrizione": "pizza margherita",
       "prezzo": 5,
-      "quantità": 1,
+      "quantita": 0,
       "id": 1
     },
     {
@@ -35,7 +35,7 @@
       "titolo": "pizza",
       "descrizione": "dfsadfgsadg",
       "prezzo": 0,
-      "quantità": 1,
+      "quantita": 0,
       "id": 2
     },
     {
@@ -43,7 +43,7 @@
       "titolo": "michele",
       "descrizione": "michele",
       "prezzo": 0,
-      "quantità": 1,
+      "quantita": 0,
       "id": 3
     },
     {
@@ -51,7 +51,7 @@
       "titolo": "gabriele",
       "descrizione": "il capo",
       "prezzo": 0,
-      "quantità": 1,
+      "quantita": 0,
       "id": 4
     }
   ],
