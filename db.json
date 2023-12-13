@@ -39,6 +39,31 @@
       "data-di-nascita": "2023-12-06",
       "genere": "non-binary",
       "id": 4
+    },
+    {
+      "nome": "samuele",
+      "cognome": "toscano",
+      "username": "",
+      "email": "ciao23@gmail.com",
+      "password": "$2a$10$SQMVe6zubdixL4zwmBGTHe0RE/aozmvycV.Uzd9EMkl/c8uEPYA22",
+      "genere": "uomo",
+      "id": 5
+    },
+    {
+      "email": "samueletoscano@hotmail.com",
+      "password": "$2a$10$UCS09z4yx8YGAqWhRtpNqekkX7YVsDx8SYc0Hr3JPXSt1vSv3uPBq",
+      "nome": "samuele",
+      "username": "samue",
+      "id": 6
+    },
+    {
+      "nome": "e2f32f3rf3rf",
+      "cognome": "samuele",
+      "username": "",
+      "email": "samueletoscano@hotmail.com",
+      "password": "$2a$10$KR62hZOULKmwqGfLOa2/deDyloLIP8eRwqZqrrStpv5SgBI5LWai6",
+      "genere": "donna",
+      "id": 7
     }
   ],
   "prodotti": [
@@ -75,5 +100,49 @@
       "id": 4
     }
   ],
-  "preferiti": []
+  "preferiti": [
+    {
+      "coord": {
+        "lon": 15.0871,
+        "lat": 37.5029
+      },
+      "weather": [
+        {
+          "id": 800,
+          "main": "Clear",
+          "description": "cielo sereno",
+          "icon": "01d"
+        }
+      ],
+      "base": "stations",
+      "main": {
+        "temp": 24.98,
+        "feels_like": 24.53,
+        "temp_min": 22.38,
+        "temp_max": 25.18,
+        "pressure": 1008,
+        "humidity": 38
+      },
+      "visibility": 10000,
+      "wind": {
+        "speed": 5.14,
+        "deg": 240
+      },
+      "clouds": {
+        "all": 0
+      },
+      "dt": 1702472403,
+      "sys": {
+        "type": 2,
+        "id": 2004061,
+        "country": "IT",
+        "sunrise": 1702447526,
+        "sunset": 1702482121
+      },
+      "timezone": 3600,
+      "id": 2525068,
+      "name": "Catania",
+      "cod": 200
+    }
+  ]
 }
