@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { HeaderService } from '../header/header.service';
-import { ActivatedRoute } from '@angular/router';
 import { CartService } from './cart.service';
 import { IProducts } from '../../pages/home/models/i-products';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
+import { ICart } from './cart';
 
 @Component({
   selector: 'app-cart',
@@ -15,32 +17,43 @@ export class CartComponent {
   showCartSubscription!:Subscription;
   cart:IProducts[]= []
   result: number[] = [];
+  totalProducts: number = 0;
+  totalPrice: number = 0;
 
   constructor(
     private headerService:HeaderService,
-    private route:ActivatedRoute,
-    private cartService:CartService
+    private cartService:CartService,
+    private router:Router
     ){}
 
   ngOnInit(){
     this.cartService.cart$.subscribe((data)=> {
       this.cart = data
       this.showCart = data.length > 0
+
     })
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
+    this.calculateTotal()
 
   }
 
-  remove(){}
 
-  getSelect(quantity: number): number[] {
-    for (let i = 1; i <= quantity; i++) {
-      this.result.push(i);
-    }
-    return this.result;
+  add(prod:IProducts){
+this.cartService.addToCart(prod)
+this.calculateTotal()
   }
+  cestina(prod:IProducts){
+    this.cartService.removeOneProduct(prod)
+    this.calculateTotal
+  }
+
+  remove(id:number ){
+  this.cartService.removeFromCart(id)
+  }
+
+
 
   ngOnDestroy(){
     this.showCartSubscription.unsubscribe();
@@ -48,5 +61,9 @@ export class CartComponent {
 
   toggleShowCart():void{
     this.headerService.toggleShowCart(this.showCart);
+  }
+  calculateTotal() {
+    this.totalProducts = this.cart.reduce((total, prod) => total + prod.quantita, 0);
+    this.totalPrice = this.cart.reduce((total, prod) => total + prod.totalPrice, 0);
   }
 }

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IProducts } from '../../pages/home/models/i-products';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root',
@@ -20,11 +21,11 @@ export class CartService {
     }
   }
 
-  addToCart(product: IProducts) {
+  addToCart(product: IProducts):void {
     const prodAdd = this.cart.find(p => p.id === product.id);
 
     if (prodAdd) {
-      prodAdd.quantita -= 1;
+      prodAdd.quantita += 1;
       prodAdd.totalPrice = prodAdd.quantita * prodAdd.prezzo;
     } else {
       const newProduct: IProducts = {
@@ -37,6 +38,23 @@ export class CartService {
 
     this.saveCartToLocalStorage();
     this.nextProd();
+  }
+
+  removeOneProduct(prod:IProducts):void{
+
+      const prodToUpdate = this.cart.find((p) => p.id === prod.id);
+
+      if (prodToUpdate) {
+        prodToUpdate.quantita -= 1;
+        if (prodToUpdate.quantita === 0) {
+          this.removeFromCart(prodToUpdate.id);
+        } else {
+          prodToUpdate.totalPrice = prodToUpdate.quantita * prodToUpdate.prezzo;
+          this.saveCartToLocalStorage();
+          this.nextProd();
+        }
+      }
+
   }
 
   removeFromCart(id:number):void{

@@ -10,14 +10,7 @@ import { IProducts } from '../home/models/i-products';
 })
 
 export class FormComponent {
-    model: IProducts= {
-        id: 0,
-        titolo: '',
-        img: '',
-        descrizione: '',
-        quantita: 1,
-        prezzo: 0
-    };
+    model!: IProducts;
 
     constructor(private httpClient: HttpClient, private route:ActivatedRoute) {}
 

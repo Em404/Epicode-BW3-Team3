@@ -1,4 +1,4 @@
-export interface IProducts {
+export interface ICart {
   totalPrice: number;
   img:string;
   titolo: string;

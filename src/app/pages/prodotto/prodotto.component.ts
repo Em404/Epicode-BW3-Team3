@@ -13,6 +13,7 @@ import { CartService } from '../../components/cart/cart.service';
   styleUrl: './prodotto.component.scss'
 })
 export class ProdottoComponent implements OnInit {
+  cart: IProducts[] = []
 
   constructor(
     private route: ActivatedRoute,
@@ -26,6 +27,7 @@ export class ProdottoComponent implements OnInit {
   showCart!: boolean;
   preferiti: IProducts[] = [];
   prodotto!: IProducts
+
 
   ngOnInit() {
     this.headerService.showCart$.subscribe(data => {

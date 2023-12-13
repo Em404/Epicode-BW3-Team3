@@ -1,19 +1,25 @@
-<div class="position-absolute bg-primary cart-div" [ngClass]="{'active': showCart}">
+
+<div class="bg-black cart-div" [ngClass]="{'active': showCart}">
   <div class="position-relative">
     <div class="position-absolute close-icon-div" (click)="toggleShowCart()">
       <i class="fa-solid fa-xmark"></i>
     </div>
     <div class="cart-content">
 
-      <div *ngFor="let prod of cart">
+      <div *ngFor="let prod of cart" class="my-5">
         <div class="container-img">
           <img [src]="prod.img" alt="{{prod.titolo}}" class="img-fluid">
         </div>
-        <p>{{ prod.titolo }} Total Price: {{ prod.totalPrice }}</p>
-        <div >
-          <select >
-            <option *ngFor="let quantity of getSelect(prod.quantita)" [value]="quantity">{{ quantity }}</option>
-          </select>
+        <div>
+          <p class="text-white">{{ prod.titolo }} Total Price: {{ prod.totalPrice }}</p>
+          <a (click)="add(prod)" class="btn btn-success"><i class="fas fa-plus"></i></a>
+          <a (click)="cestina(prod)" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
         </div>
-        <a (click)="remove()">Rimuovi dal carrello</a>
+        <div class="my-3">
+          <h5 class="text-white"> Stai acquistando {{ totalProducts }} prodotti con un prezzo totale di {{ totalPrice }} Euro </h5>
+        </div>
+        <button class="btn btn-success"> PROCEDI AL CHECKOUT </button>
       </div>
+    </div>
+  </div>
+</div>
