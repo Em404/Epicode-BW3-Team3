@@ -53,7 +53,6 @@ export class HeaderComponent {
 
     this.userSubscription = this.authService.user$.subscribe(data => {
       this.user = data.user
-      console.log(this.user);
     })
 
     this.cartSubscription = this.cartService.cart$.subscribe((data)=> {

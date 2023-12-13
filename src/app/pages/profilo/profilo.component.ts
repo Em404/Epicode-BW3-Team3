@@ -66,25 +66,20 @@ export class ProfiloComponent {
       //   this.stopLoading();
       //   return;
       // }
-      const temporaryObj:any = {...form.form.value};
-      console.log();
+      // const temporaryObj:any = {...form.form.value};
 
-      delete temporaryObj["conferma-password"];
-      this.user = {...temporaryObj}
-      console.log(this.user)
-      this.authService.updateUserInfo(this.user).subscribe(res => {
+      // delete temporaryObj["conferma-password"];
+      // this.user = {...temporaryObj}
+      // console.log(this.user)
+      this.authService.updateUserInfo(form.form.value).subscribe(res => {
+        console.log(res);
+
         this.user = res
         this.router.navigate(['/'])
       })
     })
   }
 
-  updates(id: number) {
-    this.authService.updateUser(id, this.user).subscribe(res => {
-      this.user = res
-      this.router.navigate(['/'])
-    })
-  }
 
   logout() {
     this.authService.logout()

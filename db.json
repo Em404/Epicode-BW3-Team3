@@ -64,6 +64,16 @@
       "password": "$2a$10$KR62hZOULKmwqGfLOa2/deDyloLIP8eRwqZqrrStpv5SgBI5LWai6",
       "genere": "donna",
       "id": 7
+    },
+    {
+      "email": "ciaociao@gmail.com",
+      "password": "$2a$10$ReFfGSzpFHT6C2ZIJU9yueJr0fmjscpMZCcl2GhFQ/xQHn6rVpAli",
+      "nome": "errgrgrg4g343g",
+      "cognome": "samuele",
+      "username": "ciao",
+      "data-di-nascita": "2023-12-19",
+      "genere": "non-binary",
+      "id": 8
     }
   ],
   "prodotti": [
