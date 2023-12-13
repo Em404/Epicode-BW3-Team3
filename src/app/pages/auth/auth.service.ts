@@ -116,7 +116,7 @@ export class AuthService {
 
   updateUserInfo(obj: Partial<IUser>): Observable<IUser> {
     console.log(obj);
-    return this.http.put<IUser>(this.userUrl + `/${obj.id}`,obj);
+    return this.http.put<IUser>(`${this.userUrl}/${obj.id}`, obj);
   }
 
   updateUser(id: number, updatedFields: Partial<IUser>): Observable<IUser> {

@@ -30,7 +30,7 @@ export class ProfiloComponent {
 
   loadingSubscription!:Subscription;
   errorSubscription!:Subscription;
-
+    userId!:number;
   user:IUser = {
     nome: '',
     cognome: '',
@@ -46,7 +46,8 @@ export class ProfiloComponent {
     this.route.params.subscribe((params: any) => {
      this.authService.getUserById(params.id).subscribe((res) => {
       this.user = res;
-      console.log(res);
+      this.userId = params.id
+      console.log(this.user);
       })
     });
   }
@@ -59,13 +60,15 @@ export class ProfiloComponent {
     };
     this.startLoading();
     this.http.get<IUser[]>("http://localhost:3000/users").subscribe(data => {
-      if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
-      if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
-      if (this.emailExisting || this.usernameExisting) {
-        this.stopLoading();
-        return;
-      }
+      // if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
+      // if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
+      // if (this.emailExisting || this.usernameExisting) {
+      //   this.stopLoading();
+      //   return;
+      // }
       const temporaryObj:any = {...form.form.value};
+      console.log();
+
       delete temporaryObj["conferma-password"];
       this.user = {...temporaryObj}
       console.log(this.user)
