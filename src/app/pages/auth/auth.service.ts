@@ -115,6 +115,6 @@ export class AuthService {
   }
 
   updateUserInfo(obj: IUser) {
-    return this.http.put<IUser>(this.apiUrl + `/${obj.id}`,obj);
+    return this.http.put<IUser>(this.userUrl + `/${obj.id}`,obj);
   }
 }

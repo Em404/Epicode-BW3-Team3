@@ -22,6 +22,19 @@ export class HeaderComponent {
   isLoggedSubscription!:Subscription;
   showCartSubscription!:Subscription;
 
+  user:IUser = {
+    nome: '',
+    cognome: '',
+    username: '',
+    email: '',
+    password: '',
+    genere: '',
+    data_di_nascita: 0,
+    id: 0
+  }
+
+  userSubscription!: Subscription
+
   constructor(
     private headerService:HeaderService,
     private authService:AuthService,
@@ -37,12 +50,19 @@ export class HeaderComponent {
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
     })
+
+    this.userSubscription = this.authService.user$.subscribe(data => {
+      this.user = data.user
+      console.log(this.user);
+
+    })
   }
 
 
   ngOnDestroy(){
     this.isLoggedSubscription.unsubscribe();
     this.showCartSubscription.unsubscribe();
+    this.userSubscription.unsubscribe()
   }
 
   toggleShowNav():void{
