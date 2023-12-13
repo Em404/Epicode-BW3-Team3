@@ -76,24 +76,10 @@ export class ProfiloComponent {
         return;
       }
       const temporaryObj:any = {...form.form.value};
-<<<<<<< HEAD
       delete temporaryObj["conferma-password"];
       this.user = {...temporaryObj}
       this.user.id = this.userId
       this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
-=======
-
-      delete temporaryObj["conferma-password"];
-      this.user = {...temporaryObj}
-      console.log(this.user)
-
-      this.authService.updateUserInfo(this.user).subscribe(res => {
-        console.log(res);
-
-        this.user = res
-        this.router.navigate(['/'])
-      })
->>>>>>> d91b1c435b9c538a0e82e0a6f52b98e663399f4b
     })
   }
 
