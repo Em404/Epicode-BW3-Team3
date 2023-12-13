@@ -1,0 +1,75 @@
+<div class="container d-flex flex-column justify-content-center align-items-center outer-profile-div">
+  <div class="justify-content-center">
+    <form class="border-bottom pb-4" #f="ngForm" (ngSubmit)="update(f)">
+      <p class="h3 mb-4 fw-normal text-center">Aggiorna i dati del tuo account</p>
+      <div class="row form-row">
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #nome="ngModel" name="nome" type="text" class="form-control" placeholder="nome">
+            <label for="floatingInput">{{user.nome}}</label>
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #cognome="ngModel" name="cognome" type="text" class="form-control" placeholder="cognome">
+            <label for="floatingInput">{{user.cognome}}</label>
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #username="ngModel" name="username" type="text" class="form-control" [ngClass]="{'error': usernameExisting}" placeholder="username">
+            <label for="floatingInput" [ngClass]="{'error': usernameExisting}" id="username-error">{{user.username}}</label>
+          </div>
+          <p class="mb-1 position-relative error" *ngIf="usernameExisting">Username già registrato</p>
+        </div>
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #email="ngModel" name="email" type="email" class="form-control" [pattern]="emailRegex" [ngClass]="{'error': emailExisting}" placeholder="email">
+            <label for="floatingInput" id="email-error" [ngClass]="{'error': emailExisting}">{{user.email}}</label>
+          </div>
+          <p class="mb-1 position-relative error" *ngIf="emailExisting">Email già registrata</p>
+        </div>
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control" [pattern]="passwordRegex" [ngClass]="{'error': passwordInvalid}" placeholder="password">
+            <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="password-error">Nuova password* (4-18 caratteri)</label>
+          </div>
+        </div>
+        <div class="col col-12 col-md-6 mb-2">
+          <div class="form-floating mb-2">
+            <input ngModel #confermaPassword="ngModel" name="conferma-password" type="password" class="form-control" [ngClass]="{'error': passwordInvalid}" placeholder="password">
+            <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="conferma-password-error">Conferma la tua nuova password*</label>
+          </div>
+          <p class="mb-1 position-relative error" *ngIf="passwordInvalid">Le due password non coincidono</p>
+        </div>
+        <div class="col col-12 mb-2">
+          <div class="form-floating mb-2">
+            <select ngModel #genere="ngModel" name="genere" class="form-control">
+              <option value=""></option>
+              <option value="uomo">Uomo</option>
+              <option value="donna">Donna</option>
+              <option value="non-binary">Non binary</option>
+              <option value="web-developer">Web developer</option>
+              <option value="non-specificato">Non specificato</option>
+            </select>
+            <label for="floatingInput">Genere*</label>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mx-auto mt-2">
+        <button class="btn btn-primary py-2 px-4" [disabled]="f.invalid">Aggiorna i tuoi dati</button>
+      </div>
+    </form>
+
+    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+      <button class="btn btn-outline-danger" routerLink="/auth/login" (click)="logout()">Effettua il Logout</button>
+    </div>
+  </div>
+  <div class="alert text-white position-fixed error-message" *ngIf="error">Si è verificato un errore</div>
+</div>
+
+<div class="outer-spinner-div position-fixed d-flex justify-content-center align-items-center" *ngIf="loading">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>

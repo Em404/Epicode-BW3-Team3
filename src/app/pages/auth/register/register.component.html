@@ -1,24 +1,23 @@
-<div class="container mt-4 pb-4 d-flex flex-column justify-content-center align-items-center">
+<div class="container d-flex flex-column justify-content-center align-items-center outer-register-div">
   <div class="justify-content-center">
-
     <form class="border-bottom pb-4" #f="ngForm" (ngSubmit)="register(f)">
       <p class="h3 mb-4 fw-normal text-center">Registra un Account</p>
       <div class="row form-row">
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
-            <input ngModel #nome="ngModel" name="nome" type="text" class="form-control" required>
+            <input ngModel #nome="ngModel" name="nome" type="text" class="form-control" required placeholder="nome">
             <label for="floatingInput">Nome*</label>
           </div>
         </div>
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
-            <input ngModel #cognome="ngModel" name="cognome" type="text" class="form-control" required>
+            <input ngModel #cognome="ngModel" name="cognome" type="text" class="form-control" required placeholder="cognome">
             <label for="floatingInput">Cognome*</label>
           </div>
         </div>
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
-            <input ngModel #username="ngModel" name="username" type="text" class="form-control" [ngClass]="{'error': usernameExisting}" required (click)="resetUsername()">
+            <input ngModel #username="ngModel" name="username" type="text" class="form-control" [ngClass]="{'error': usernameExisting}" required (click)="resetUsername()" placeholder="username">
             <label for="floatingInput" [ngClass]="{'error': usernameExisting}" id="username-error">Username*</label>
           </div>
           <p class="mb-1 position-relative error" *ngIf="usernameExisting">Username già registrato</p>
@@ -32,13 +31,13 @@
         </div>
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control" required [pattern]="passwordRegex" [ngClass]="{'error': passwordInvalid}" (click)="resetPassword()">
+            <input ngModel #password="ngModel" name="password" type="password" class="form-control" required [pattern]="passwordRegex" [ngClass]="{'error': passwordInvalid}" (click)="resetPassword()" placeholder="password">
             <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="password-error">Password* (4-18 caratteri)</label>
           </div>
         </div>
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
-            <input ngModel #confermaPassword="ngModel" name="conferma-password" type="password" class="form-control" required [ngClass]="{'error': passwordInvalid}" (click)="resetPassword()">
+            <input ngModel #confermaPassword="ngModel" name="conferma-password" type="password" class="form-control" required [ngClass]="{'error': passwordInvalid}" (click)="resetPassword()" placeholder="password">
             <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="conferma-password-error">Conferma password*</label>
           </div>
           <p class="mb-1 position-relative error" *ngIf="passwordInvalid">Le due password non coincidono</p>

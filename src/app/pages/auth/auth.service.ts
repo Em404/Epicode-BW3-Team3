@@ -7,6 +7,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { Ilogin } from './models/ilogin';
 import { BehaviorSubject, Subject, Observable, tap, catchError, throwError, map } from 'rxjs';
 import { IAccessData } from './models/i-access-data';
+import { IUser } from './models/i-user';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,7 @@ export class AuthService {
   apiUrl: string = 'http://localhost:3000'
   loginUrl: string = this.apiUrl + '/login'
   registerUrl: string = this.apiUrl + '/register'
+  userUrl: string = 'http://localhost:3000/users'
 
   constructor(private http: HttpClient, private router: Router) {
     this.restoreUser()
@@ -106,5 +108,13 @@ export class AuthService {
 
   stopLoading() {
     this.loadingSubject.next(false)
+  }
+
+  getUserById(id:number):Observable<IUser>{
+    return this.http.get<IUser>(`${this.userUrl}/${id}`)
+  }
+
+  updateUserInfo(obj: IUser) {
+    return this.http.put<IUser>(this.apiUrl + `/${obj.id}`,obj);
   }
 }
