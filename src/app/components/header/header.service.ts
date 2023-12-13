@@ -13,4 +13,8 @@ export class HeaderService {
     this.showCartSubject.next(!bool);
   }
 
+  closeCart():void{
+    this.showCartSubject.next(false);
+  }
+
 }

@@ -3,8 +3,6 @@ import { Subscription } from 'rxjs';
 import { HeaderService } from './header.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IUser } from '../../pages/auth/models/i-user';
-import { CartComponent } from '../cart/cart.component';
 import { CartService } from '../cart/cart.service';
 import Swal from 'sweetalert2';
 import { IProducts } from '../../pages/home/models/i-products';
@@ -21,12 +19,13 @@ export class HeaderComponent {
   showCart!:boolean;
   isLoggedSubscription!:Subscription;
   showCartSubscription!:Subscription;
+  cartSubscription!:Subscription;
 
   constructor(
     private headerService:HeaderService,
     private authService:AuthService,
     private router:Router,
-    private cartService: CartService
+    private cartService:CartService,
   ){}
 
   ngOnInit(){
@@ -36,6 +35,10 @@ export class HeaderComponent {
 
     this.showCartSubscription = this.headerService.showCart$.subscribe(data => {
       this.showCart = data;
+    })
+
+    this.cartSubscription = this.cartService.cart$.subscribe((data)=> {
+      this.cart = data;
     })
   }
 
@@ -53,17 +56,20 @@ export class HeaderComponent {
     this.headerService.toggleShowCart(this.showCart);
   }
 
+  closeCart(){
+    this.headerService.closeCart();
+  }
+
   toggleAll():void{
     this.toggleShowNav();
     this.toggleShowCart();
-    this.cartService.cart$.subscribe((data)=> {
-      this.cart = data
-      this.showCart = data.length > 0
-      if (!data.length) {
-        Swal.fire('Il carrello è vuoto')
-        this.toggleShowCart()
-      }
-    })
+
+    this.showCart = !!this.cart.length
+    if (!this.cart.length) {
+      Swal.fire('Il carrello è vuoto').then((result) => {
+        this.closeCart();
+      })
+    }
   }
 
   handleRedirect(){
