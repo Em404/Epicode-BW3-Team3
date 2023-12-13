@@ -10,8 +10,7 @@ import { IProducts } from '../home/models/i-products';
 })
 
 export class FormComponent {
-    model!: IProducts
-
+    model!: IProducts;
 
     constructor(private httpClient: HttpClient, private route:ActivatedRoute) {}
 
