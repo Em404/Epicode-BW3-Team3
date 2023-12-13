@@ -1,7 +1,9 @@
 .cart-div{
+  position: fixed;
   width: 100%;
-  height: calc(100vh - 56px);
-  top: 56px;
+  height:100vh;
+  max-height: 100%;
+  top: 0px;
   z-index: 10;
   left: 100%;
   transition: all 0.5s;
@@ -34,5 +36,9 @@
   }
 }
 
+.container-img{
+  width: 300px;
+  height: 200px;
+}
 
 

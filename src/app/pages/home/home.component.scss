@@ -44,6 +44,27 @@ border-radius: 25px;
   top: 30%;
   left: 32%;
 }
+.img-container{
+  width: 300px;
+  height: 100px;
+}
+.img-prod{
+  width: 356px;
+  height: 238px;
+  img{
+    object-fit: cover;
+    height: 100%;
+  }
+}
+.carousel-img{
+  width: 600px;
+  height: 400px;
+  img{
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
 
 
 

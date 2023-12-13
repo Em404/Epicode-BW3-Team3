@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HomeService } from '../../../home.service';
+import { HomeService } from './home.service';
 import { IProducts } from './models/i-products';
 
 @Component({
@@ -31,7 +31,6 @@ export class HomeComponent {
 
   onButtonMouseOver(i:number):void{
     this.styleProduct[i].hover=true;
-    console.log(this.styleProduct);
 
   }
   onButtonMouseOut(i:number):void{
