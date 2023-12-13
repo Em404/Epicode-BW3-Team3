@@ -52,31 +52,23 @@ export class ProfiloComponent {
   }
 
   update(form:NgForm) {
-
     const valid = form.form.value.password === form.form.value["conferma-password"];
     if (!valid) {
       this.passwordInvalid = true;
       return;
     };
-
     this.startLoading();
     this.http.get<IUser[]>("http://localhost:3000/users").subscribe(data => {
       if (data.some(user => user.username === form.form.value.username)) this.usernameExisting = true;
-
       if (data.some(user => user.email === form.form.value.email)) this.emailExisting = true;
-
       if (this.emailExisting || this.usernameExisting) {
         this.stopLoading();
         return;
       }
-
       const temporaryObj:any = {...form.form.value};
       delete temporaryObj["conferma-password"];
-
       this.user = {...temporaryObj}
-
       console.log(this.user)
-
       this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
     })
   }

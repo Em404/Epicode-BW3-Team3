@@ -115,6 +115,7 @@ export class AuthService {
   }
 
   updateUserInfo(obj: IUser) {
+    console.log(obj);
     return this.http.put<IUser>(this.userUrl + `/${obj.id}`,obj);
   }
 }
