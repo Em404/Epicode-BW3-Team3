@@ -17,10 +17,12 @@
         </div>
       </div>
     </div>
-    <div class="my-3">
-      <h5 class="text-dark"> Stai acquistando {{ totalProducts }} prodotti con un prezzo totale di {{ totalPrice }} Euro </h5>
+    <div *ngIf="isEmpty">
+      <div class="" >
+        <h5 class="text-dark"> Stai acquistando {{ totalProducts }} prodotti con un prezzo totale di {{ totalPrice }} Euro </h5>
+      </div>
+      <button class="btn btn-success"> PROCEDI AL CHECKOUT </button>
     </div>
-    <button class="btn btn-success"> PROCEDI AL CHECKOUT </button>
   </div>
 </div>
 
