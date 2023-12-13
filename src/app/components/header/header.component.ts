@@ -3,6 +3,7 @@ import { Subscription } from 'rxjs';
 import { HeaderService } from './header.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { IUser } from '../../pages/auth/models/i-user';
 
 @Component({
   selector: 'app-header',

@@ -8,6 +8,7 @@ import { FormComponent } from './pages/form/form.component';
 import { LoginGuard } from './pages/auth/login.guard';
 import { AuthGuard } from './pages/auth/auth.guard';
 import { EditComponent } from './pages/edit/edit.component';
+import { ProfiloComponent } from './pages/profilo/profilo.component';
 
 const routes: Routes = [
   {
@@ -28,7 +29,7 @@ const routes: Routes = [
   },
   {
     path: "profilo/:id",
-    component: PreferitiComponent,
+    component: ProfiloComponent,
     title: "Profilo | Marketplace",
     canActivate: [AuthGuard],
   },

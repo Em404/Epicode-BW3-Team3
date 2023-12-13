@@ -22,7 +22,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/profilo/1" *ngIf="isLogged">
+          <a class="nav-link" [routerLink]="'/profilo/1'" *ngIf="isLogged">
             <i class="fa-solid fa-user"></i>
           </a>
         </li>
