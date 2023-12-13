@@ -3,9 +3,7 @@ import { Subscription } from 'rxjs';
 import { HeaderService } from '../header/header.service';
 import { CartService } from './cart.service';
 import { IProducts } from '../../pages/home/models/i-products';
-import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-import { ICart } from './cart';
 
 @Component({
   selector: 'app-cart',
