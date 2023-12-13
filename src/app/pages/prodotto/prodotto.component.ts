@@ -40,11 +40,13 @@ export class ProdottoComponent implements OnInit {
 
     this.route.params.subscribe((params: any) => {
       this.homeService.getProductsById(params.id).subscribe((res) => {
+
         if (res.quantita > 0) {
           this.prodotto = res;
         } else {
-          Swal.fire('Questo prodotto non è più disponibile');
-          this.router.navigate(['']);
+          Swal.fire('Questo prodotto non è più disponibile').then(result => {
+            this.router.navigate(['']);
+          });
         }
       });
     });

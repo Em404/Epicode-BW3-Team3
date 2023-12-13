@@ -46,7 +46,7 @@ export class FormComponent {
           titolo: this.model.titolo,
           descrizione: this.model.descrizione,
           prezzo: this.model.prezzo,
-          quantità: this.model.quantita
+          quantita: this.model.quantita
       }).subscribe({
           next: (response) => {
               console.log('Prodotto aggiunto', response);
