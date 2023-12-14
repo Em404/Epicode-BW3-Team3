@@ -132,6 +132,24 @@
       "prezzo": 32323,
       "quantita": 2,
       "id": 12
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "fewewewf",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 13
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "fewewewf",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 14
     }
   ],
   "preferiti": [],
@@ -150,45 +168,6 @@
       ],
       "userId": 2,
       "id": 5
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "belllo",
-          "descrizione": "htrrththtrh",
-          "prezzo": 32323,
-          "quantita": 2,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "belllo",
-          "descrizione": "htrrththtrh",
-          "prezzo": 32323,
-          "quantita": 2,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "belllo",
-          "descrizione": "htrrththtrh",
-          "prezzo": 32323,
-          "quantita": 2,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 7
     }
   ],
   "email": []

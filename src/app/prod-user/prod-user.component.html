@@ -8,7 +8,7 @@
     <p class="card-text">{{prod.prezzo}}</p>
     <p class="card-text">Sono rimaste solo {{prod.quantita}} disponibili di {{prod.titolo}}</p>
 
-    <a  class="btn btn-primary" >Vai alla pagina Prodotto</a>
+    <a  class="btn btn-primary" [routerLink]="'/prodotto/' + prod.id" >Vai alla pagina Prodotto</a>
     <a (click)="delete(prod.id)" class="btn btn-primary">Rimuovi dai Preferiti</a>
 
   </div>
