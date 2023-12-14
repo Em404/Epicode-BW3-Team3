@@ -131,13 +131,17 @@ border-radius: 25px;
   width: 300px;
   height: 100px;
 }
-.shadow{-webkit-box-shadow: 0px 0px 10px 5px #FFFFFF;
-  -moz-box-shadow: 0px 0px 10px 5px #FFFFFF;
-  -o-box-shadow: 0px 0px 10px 5px #FFFFFF;
-  box-shadow: 0px 0px 10px 5px #FFFFFF !important;}
+.shadow{-webkit-box-shadow: 0px 0px 10px 5px red;
+  -moz-box-shadow: 0px 0px 10px 5px red;
+  -o-box-shadow: 0px 0px 10px 5px red;
+  box-shadow: 0px 0px 10px 5px red !important;}
 .img-prod{
   width: 300px;
   height: 238px;
+  -webkit-box-shadow: 5px 5px 10px 0px white;
+-moz-box-shadow: 5px 5px 10px 0px white;
+-o-box-shadow: 5px 5px 10px 0px white;
+box-shadow: 5px 5px 10px 0px withe;
   img{
     object-fit: cover;
     height: 100%;
