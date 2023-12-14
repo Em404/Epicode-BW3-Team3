@@ -1,3 +1,77 @@
-input.error{
-  border: 1px solid red;
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-form {
+  background-color: #f4deb2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 5px red;
+  transition: background-color 0.3s ease;
+}
+
+.my-form:hover {
+  background-color: #f0d8a5;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.form-group:hover {
+  transform: scale(1.03);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #f40009;
+  outline: none;
+}
+
+.error {
+  margin-top: 5px;
+}
+
+.text-danger {
+  color: red;
+}
+
+.btn-primary {
+  background-color: #f40009;
+  color: white;
+  border: 2px solid #f40009;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:disabled {
+    background-color: #c0c0c0;
+    border: 2px solid #c0c0c0;
+    cursor: not-allowed;
+  }
+
+  &:hover:not([disabled]) {
+    background-color: transparent;
+    color: #f40009;
+  }
 }
