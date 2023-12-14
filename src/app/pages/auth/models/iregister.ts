@@ -1,3 +1,5 @@
+import { IProducts } from "../../home/models/i-products";
+
 export interface Iregister {
   nome:string,
   cognome:string,

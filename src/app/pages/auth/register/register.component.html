@@ -1,4 +1,4 @@
-<div class="container d-flex flex-column justify-content-center align-items-center outer-register-div">
+<div class="container d-flex flex-column justify-content-center align-items-center outer-register-div py-5">
   <div class="justify-content-center">
     <form class="border-bottom pb-4" #f="ngForm" (ngSubmit)="register(f)">
       <p class="h3 mb-4 fw-normal text-center">Registra un Account</p>
@@ -63,13 +63,13 @@
         </div>
       </div>
       <div class="text-center mx-auto mt-2">
-        <button class="btn btn-primary py-2 px-4" [disabled]="f.invalid">Registrati ora!</button>
+        <button class="btn btn-success py-2 px-4" [disabled]="f.invalid">Registrati ora!</button>
       </div>
     </form>
 
     <div class="d-flex flex-column justify-content-center align-items-center">
       <p class="mt-3">Hai già un account?</p>
-      <a class="btn btn-outline-primary" routerLink="/auth/login">Effettua il Login!</a>
+      <a class="btn btn-outline-success" routerLink="/auth/login">Effettua il Login!</a>
     </div>
   </div>
 

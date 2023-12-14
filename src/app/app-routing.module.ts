@@ -8,6 +8,7 @@ import { FormComponent } from './pages/form/form.component';
 import { LoginGuard } from './pages/auth/login.guard';
 import { AuthGuard } from './pages/auth/auth.guard';
 import { ProfiloComponent } from './pages/profilo/profilo.component';
+import { ProdUserComponent } from './prod-user/prod-user.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
     component:FormComponent,
     title: "Form | Marketplace",
     canActivate: [AuthGuard],
+  },
+  {
+    path:'prod-user/:userId',
+    component:ProdUserComponent
   }
 ];
 
