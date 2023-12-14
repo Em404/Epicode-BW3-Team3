@@ -1,29 +1,30 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { IProducts } from '../pages/home/models/i-products';
-import { IprodUser } from './iprod-user';
+import { Observable } from 'rxjs';
+import { ProdUser } from '../prod-user';
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdUserService {
-
-  constructor(private http: HttpClient) { }
-  prodUserUrl:string = 'http://localhost:3000/prodottiUser'
-
-
-  getAllProductsUser():Observable<IProducts[]>{
-    return  this.http.get<IProducts[]>(this.prodUserUrl)
+userProdUrl:string = 'http://localhost:3000/userProd'
+  constructor(private http: HttpClient) {
    }
 
-   addToMyProduct(prod:IprodUser):Observable<IprodUser>{
-   return  this.http.post<IprodUser>(this.prodUserUrl, prod)
+   addToMyProduct(obj:ProdUser):Observable<ProdUser>{
+     return this.http.post<ProdUser>(this.userProdUrl, obj)
    }
 
-   getProductsByIdUser(id:number):Observable<IProducts[]>{
-     return this.http.get<IProducts[]>(`${this.prodUserUrl}/${id}`)
+   getByUserId(userId:number):Observable<ProdUser>{
+    return this.http.get<ProdUser>(`${this.userProdUrl}/${userId}`)
    }
-
-
+   getProdUser():Observable<ProdUser>{
+    return this.http.get<ProdUser>(this.userProdUrl)
+   }
+   deleteByUserId(userId: number): Observable<any> {
+    const url = `${this.userProdUrl}/${userId}`;
+    return this.http.delete(url);
+  }
 }

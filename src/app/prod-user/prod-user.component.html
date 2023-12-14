@@ -1,16 +1,20 @@
+<div *ngIf="userId">
+  <h2 class="text-center">I miei prodotti </h2>
 
-<div class="row ">
-
-  <div class="card text-end col-6 p-0 " *ngFor="let prod of userProd" >
-    <img src="{{prod.img}}" alt="{{prod.titolo}}">
-    <h5 class="card-title">{{prod.titolo}}</h5>
-    <p class="card-text">{{prod.descrizione}}</p>
-    <p class="card-text">{{prod.prezzo}}</p>
-    <p class="card-text">Sono rimaste solo {{prod.quantita}} disponibili di {{prod.titolo}}</p>
-
-    <a  class="btn btn-primary">Vai alla pagina Prodotto</a>
-    <!-- <a (click)="RemoveFromYourProduct(pref.id)" class="btn btn-primary">Rimuovi dai Preferiti</a> -->
+  <div *ngFor="let prodotto of prodotti">
+    <div class="prodotto">
+      <img [src]="prodotto.img" alt="{{ prodotto.titolo }}">
+      <h3>{{ prodotto.titolo }}</h3>
+      <p>{{ prodotto.descrizione }}</p>
+      <p>Prezzo: {{ prodotto.prezzo }} €</p>
+      <p>Quantità disponibile: {{ prodotto.quantita }}</p>
+    </div>
+    <a class="btn btn-warning" (click)="edit(prodotto.id)">Modifica</a>
+    <a class="btn btn-danger"(click)="delete(prodotto.id)">Elimina </a>
 
   </div>
 </div>
 
+<div *ngIf="!userId">
+  <p>Id utente non valido.</p>
+</div>

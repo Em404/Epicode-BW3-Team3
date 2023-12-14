@@ -31,6 +31,7 @@ export class ProfiloComponent {
   loadingSubscription!:Subscription;
   errorSubscription!:Subscription;
     userId!:number;
+
   user:IUser = {
     nome: '',
     cognome: '',
@@ -39,7 +40,7 @@ export class ProfiloComponent {
     password: '',
     genere: '',
     data_di_nascita: 0,
-    id: 0
+    id: 0,
   }
 
   ngOnInit() {
@@ -64,6 +65,7 @@ export class ProfiloComponent {
     if (!form.form.value.email) form.form.value.email = this.user.email;
     if (!form.form.value.password) form.form.value.password = this.user.password;
     if (!form.form.value.genere) form.form.value.genere = this.user.genere;
+
     form.form.value.id = this.user.id;
     console.log(form.form.value)
     this.startLoading();

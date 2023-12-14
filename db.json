@@ -1,25 +1,5 @@
 {
-  "users": [
-    {
-      "nome": "errgrgrg4g343g",
-      "cognome": "samuele",
-      "username": "ciao",
-      "email": "samueletoscano@hotmail.com",
-      "password": "$2a$10$q8m2MZH9OCqtXlajUndM6ecBkjRGHnzfeYEY/2S.oFi4l7/UxzW.q",
-      "genere": "uomo",
-      "id": 1
-    },
-    {
-      "email": "samuelescano@hotmail.com",
-      "password": "$2a$10$LwJ5RcoTzihewL3eMN5SuOv8hYKZZcysA/kViIGq.HC5Oy01DiB9O",
-      "nome": "errgrgrg4g343g",
-      "cognome": "samuele",
-      "username": "ciao101010",
-      "data-di-nascita": "2023-11-29",
-      "genere": "uomo",
-      "id": 2
-    }
-  ],
+  "users": [],
   "prodotti": [
     {
       "totalPrice": 0,
@@ -43,58 +23,29 @@
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
       "titolo": "belllo",
-      "descrizione": "vevre",
+      "descrizione": "ettrhthh",
       "prezzo": 32323,
       "quantita": 2,
       "id": 3
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "regrg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 4
     }
   ],
   "preferiti": [],
-  "prodottiUser": [
+  "userProd": [
     {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "kumuu",
-      "prezzo": 32323,
-      "quantita": 2,
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "belllo",
+          "descrizione": "ettrhthh",
+          "prezzo": 32323,
+          "quantita": 2,
+          "id": 0
+        }
+      ],
+      "userId": 1,
       "id": 1
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "tth",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 2
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "vevre",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 3
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "regrg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 4
     }
-  ]
+  ],
+  "email": []
 }

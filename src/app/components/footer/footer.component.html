@@ -11,13 +11,12 @@
             <h5>Iscriviti alla nostra newsletter</h5>
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Indirizzo email</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo email">
-              <button class="btn btn-primary" type="button">Iscriviti</button>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo email" [(ngModel)] = "email" name="email">
+              <button class="btn btn-primary" type="button" (click)="iscriviti()">Iscriviti</button>
             </div>
           </form>
         </div>
       </div>
-
       <div class="pt-4 mt-4 text-center border-top">
         <p class="mb-0">Marketplace 2023&copy;</p>
         <p class="mb-0">P.IVA 182740327068</p>
