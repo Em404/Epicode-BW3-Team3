@@ -4,18 +4,18 @@
       <img src="../../../assets/logo.png" alt="Bootstrap" width="140" height="70">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleShowNav()">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon hamburger"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{'show': showNav}">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ">
         <li class="nav-item me-2 mb-2 mb-md-0">
-          <a class="button" routerLink="/">HOME</a>
+          <a class="button" routerLink="/" (click)="toggleShowNav()">HOME</a>
         </li>
         <li class="nav-item me-2 mb-2 mb-md-0">
-          <a class="button" routerLink="/preferiti">PREFERITI</a>
+          <a class="button" routerLink="/preferiti" (click)="toggleShowNav()">PREFERITI</a>
         </li>
         <li class="nav-item mb-2 mb-md-0" *ngIf="isLogged">
-          <a class="button" routerLink="/form">VENDI UN PRODOTTO</a>
+          <a class="button" routerLink="/form" (click)="toggleShowNav()">VENDI UN PRODOTTO</a>
         </li>
         <li class="nav-item">
           <div class="d-flex justify-content-between align-items-center">
