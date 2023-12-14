@@ -10,11 +10,12 @@ import { IProducts } from './models/i-products';
 export class HomeComponent {
 
   items: string[] = [
-    '../../../assets/Screenshot 2023-11-13 112130.png',
-    '../../../assets/Screenshot 2023-12-12 160131.png',
-    '../../../assets/Screenshot 2023-12-13 145148.png',
-    '../../../assets/Screenshot 2023-10-23 093746.png'
+    '../../../assets/carousel/albero.jpg',
+    '../../../assets/carousel/sorprendi.jpg',
+    '../../../assets/carousel/crea.jpg',
+    '../../../assets/brutale.png'
   ];
+
   activeIndex: number = 0;
   product!: IProducts[];
   styleProduct!:any[]
@@ -41,7 +42,6 @@ export class HomeComponent {
     this.styleProduct[i].hover=false;
   }
 
-
   startCarosello(){
     setInterval(() => {
       this.toggleActive();
@@ -51,8 +51,4 @@ export class HomeComponent {
   toggleActive() {
     this.activeIndex = (this.activeIndex + 1) % this.items.length;
   }
-
-
-
-
 }

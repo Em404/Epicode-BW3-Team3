@@ -1,5 +1,16 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "emanuele@mail.it",
+      "password": "$2a$10$WtUGAyyHl.nBEZORYyrCIeSBTqUvKAqHQyQJyWdWlCIaD9Bz.xU0u",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
+      "id": 1
+    }
+  ],
   "prodotti": [
     {
       "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
