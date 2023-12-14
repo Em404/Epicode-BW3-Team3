@@ -1,79 +1,156 @@
-<div class="container d-flex flex-column justify-content-center align-items-center outer-profile-div">
-  <div class="justify-content-center">
-
-      <form class="border-bottom pb-4" #f="ngForm" (ngSubmit)="update(f)">
-      <p class="h3 mb-4 fw-normal text-center">Aggiorna i dati del tuo account</p>
-      <div class="row form-row">
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #nome="ngModel" name="nome" type="text" class="form-control py-3" [value]="user.nome" placeholder="Nome">
+<div class="bg-form">
+  <div
+    class="container d-flex flex-column justify-content-center align-items-center outer-profile-div"
+  >
+    <div class="justify-content-center">
+      <form class="border-bottom border-white pb-4" #f="ngForm" (ngSubmit)="update(f)">
+        <p class="h2 mb-4 fw-normal text-center">
+          Aggiorna i dati del tuo account
+        </p>
+        <div class="row form-row">
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #nome="ngModel"
+                name="nome"
+                type="text"
+                class="form-control py-3"
+                [value]="user.nome"
+                placeholder="Nome"
+              />
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #cognome="ngModel"
+                name="cognome"
+                type="text"
+                class="form-control py-3"
+                [value]="user.cognome"
+                placeholder="Cognome"
+              />
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #username="ngModel"
+                name="username"
+                type="text"
+                class="form-control py-3"
+                [ngClass]="{ error: usernameExisting }"
+                id="username-error"
+                [value]="user.username"
+                placeholder="Username"
+              />
+              <!-- <label for="floatingInput" [ngClass]="{'error': usernameExisting}" id="username-error">{{user.username}}</label> -->
+            </div>
+            <p class="mb-1 position-relative error" *ngIf="usernameExisting">
+              Username già registrato
+            </p>
+          </div>
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #email="ngModel"
+                name="email"
+                type="email"
+                class="form-control py-3"
+                [pattern]="emailRegex"
+                [ngClass]="{ error: emailExisting }"
+                id="email-error"
+                [value]="user.email"
+                placeholder="Email"
+              />
+              <!-- <label for="floatingInput" id="email-error" [ngClass]="{'error': emailExisting}">{{user.email}}</label> -->
+            </div>
+            <p class="mb-1 position-relative error" *ngIf="emailExisting">
+              Email già registrata
+            </p>
+          </div>
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #password="ngModel"
+                name="password"
+                type="password"
+                class="form-control py-3"
+                [pattern]="passwordRegex"
+                [ngClass]="{ error: passwordInvalid }"
+                id="password-error"
+                placeholder="Nuova password* (4-18 caratteri)"
+              />
+              <!-- <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="password-error">Nuova password* (4-18 caratteri)</label> -->
+              <!-- <p class="text-secondary">Nuova password* (4-18 caratteri)</p> -->
+            </div>
+            <p class="mb-1 position-relative error" *ngIf="passwordInvalid">
+              Inserisci la tua password per fare la modifica
+            </p>
+          </div>
+          <div class="col col-12 col-md-6 mb-2">
+            <div class="mb-2">
+              <input
+                ngModel
+                #confermaPassword="ngModel"
+                name="conferma-password"
+                type="password"
+                class="form-control py-3"
+                [ngClass]="{ error: passwordInvalid }"
+                id="conferma-password-error"
+                placeholder="Conferma la tua nuova password*"
+              />
+              <!-- <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="conferma-password-error">Conferma la tua nuova password*</label> -->
+              <!-- <p class="text-secondary">Conferma la tua nuova password*</p> -->
+            </div>
+            <p class="mb-1 position-relative error" *ngIf="passwordInvalid">
+              Le due password non coincidono
+            </p>
+          </div>
+          <div class="col col-12 mb-2">
+            <div class="form-floating mb-2">
+              <select
+                ngModel
+                #genere="ngModel"
+                name="genere"
+                class="form-control"
+              >
+                <option value="">{{ user.genere }}</option>
+                <option value="uomo">Uomo</option>
+                <option value="donna">Donna</option>
+                <option value="non-binary">Non binary</option>
+                <option value="web-developer">Web developer</option>
+                <option value="non-specificato">Non specificato</option>
+              </select>
+              <label for="floatingInput">Genere*</label>
+            </div>
           </div>
         </div>
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #cognome="ngModel" name="cognome" type="text" class="form-control py-3" [value]="user.cognome" placeholder="Cognome">
+          <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+            <button class="btn btn-success py-2 px-2 mb-3" [disabled]="f.invalid">Aggiorna i tuoi dati</button>
+            <button class="btn btn-success py-2 px-4" [routerLink]="'/prod-user/' + userId">I miei prodotti</button>
           </div>
-        </div>
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #username="ngModel" name="username" type="text" class="form-control py-3" [ngClass]="{'error': usernameExisting}" id="username-error" [value]="user.username" placeholder="Username">
-            <!-- <label for="floatingInput" [ngClass]="{'error': usernameExisting}" id="username-error">{{user.username}}</label> -->
-          </div>
-          <p class="mb-1 position-relative error" *ngIf="usernameExisting">Username già registrato</p>
-        </div>
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #email="ngModel" name="email" type="email" class="form-control py-3" [pattern]="emailRegex" [ngClass]="{'error': emailExisting}" id="email-error" [value]="user.email" placeholder="Email">
-            <!-- <label for="floatingInput" id="email-error" [ngClass]="{'error': emailExisting}">{{user.email}}</label> -->
-          </div>
-          <p class="mb-1 position-relative error" *ngIf="emailExisting">Email già registrata</p>
-        </div>
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #password="ngModel" name="password" type="password" class="form-control py-3" [pattern]="passwordRegex" [ngClass]="{'error': passwordInvalid}" id="password-error" placeholder="Nuova password* (4-18 caratteri)" >
-            <!-- <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="password-error">Nuova password* (4-18 caratteri)</label> -->
-            <!-- <p class="text-secondary">Nuova password* (4-18 caratteri)</p> -->
-          </div>
-          <p class="mb-1 position-relative error" *ngIf="passwordInvalid">Inserisci la tua password per fare la modifica</p>
-
-        </div>
-        <div class="col col-12 col-md-6 mb-2">
-          <div class="mb-2">
-            <input ngModel #confermaPassword="ngModel" name="conferma-password" type="password" class="form-control py-3" [ngClass]="{'error': passwordInvalid}" id="conferma-password-error" placeholder="Conferma la tua nuova password*">
-            <!-- <label for="floatingInput" [ngClass]="{'error': passwordInvalid}" id="conferma-password-error">Conferma la tua nuova password*</label> -->
-            <!-- <p class="text-secondary">Conferma la tua nuova password*</p> -->
-          </div>
-          <p class="mb-1 position-relative error" *ngIf="passwordInvalid">Le due password non coincidono</p>
-        </div>
-        <div class="col col-12 mb-2">
-          <div class="form-floating mb-2">
-            <select ngModel #genere="ngModel" name="genere" class="form-control">
-              <option value="">{{user.genere}}</option>
-              <option value="uomo">Uomo</option>
-              <option value="donna">Donna</option>
-              <option value="non-binary">Non binary</option>
-              <option value="web-developer">Web developer</option>
-              <option value="non-specificato">Non specificato</option>
-            </select>
-            <label for="floatingInput">Genere*</label>
-          </div>
-        </div>
+      </form>
+      <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+        <button class="btn btn-danger py-2 px-3" routerLink="/auth/login" (click)="logout()">Effettua il Logout</button>
       </div>
-      <div class="text-center mx-auto mt-2 d-flex">
-        <button class="btn btn-primary py-2 px-4" [routerLink]="'/prod-user/' + userId">I miei prodotti</button>
-        <button class="btn btn-primary py-2 px-4" [disabled]="f.invalid" >Aggiorna i tuoi dati</button>
-      </div>
-    </form>
-
-    <div class="d-flex flex-column justify-content-center align-items-center mt-3">
-      <button class="btn btn-outline-danger" routerLink="/auth/login" (click)="logout()">Effettua il Logout</button>
+    </div>
+    <div class="alert text-white position-fixed error-message" *ngIf="error">
+      Si è verificato un errore
     </div>
   </div>
-  <div class="alert text-white position-fixed error-message" *ngIf="error">Si è verificato un errore</div>
-</div>
 
-<div class="outer-spinner-div position-fixed d-flex justify-content-center align-items-center" *ngIf="loading">
-  <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+  <div
+    class="outer-spinner-div position-fixed d-flex justify-content-center align-items-center"
+    *ngIf="loading"
+  >
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
   </div>
 </div>

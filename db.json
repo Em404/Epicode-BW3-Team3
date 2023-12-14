@@ -22,6 +22,16 @@
       "data-di-nascita": "2023-11-30",
       "genere": "donna",
       "id": 2
+    },
+    {
+      "email": "emanuele@mail.com",
+      "password": "$2a$10$S/tBdpM4BCjsHV5REO2.4.FD.W40K41FMTXwS2esbT/qDQTxgIV3q",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
+      "id": 3
     }
   ],
   "prodotti": [
@@ -150,9 +160,28 @@
       "prezzo": 32323,
       "quantita": 2,
       "id": 14
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "Test macchia",
+      "descrizione": "descrizione brutale",
+      "prezzo": 10,
+      "quantita": 1,
+      "id": 15
     }
   ],
-  "preferiti": [],
+  "preferiti": [
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "belllo",
+      "descrizione": "kumuu",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 1
+    }
+  ],
   "userProd": [
     {
       "prodotti": [
@@ -168,8 +197,22 @@
       ],
       "userId": 2,
       "id": 5
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "Test macchia",
+          "descrizione": "descrizione brutale",
+          "prezzo": 10,
+          "quantita": 1,
+          "id": 0
+        }
+      ],
+      "userId": 3,
+      "id": 6
     }
   ],
-
   "email": []
 }

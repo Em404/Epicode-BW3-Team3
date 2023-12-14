@@ -1,12 +1,10 @@
-
-<div class="bg-black cart-div" [ngClass]="{'active': showCart}">
+<div class="bg-cart cart-div" [ngClass]="{ active: showCart }">
   <div class="position-relative">
     <div class="position-absolute close-icon-div" (click)="toggleShowCart()">
       <i class="fa-solid fa-xmark"></i>
     </div>
-    <div class="cart-content">
-
-      <div *ngFor="let prod of cart" class="my-5">
+    <div class="cart-content container">
+      <!-- <div *ngFor="let prod of cart" class="my-5">
         <div class="container-img">
           <img [src]="prod.img" alt="{{prod.titolo}}" class="img-fluid">
         </div>
@@ -15,14 +13,47 @@
           <a (click)="add(prod)" class="btn btn-success"><i class="fas fa-plus"></i></a>
           <a (click)="cestina(prod)" class="btn btn-warning"><i class="fas fa-trash-alt"></i></a>
         </div>
+      </div> -->
+
+      <div *ngFor="let prod of cart" class="my-5">
+        <div class="container">
+          <div class="card bg-card text-white mb-3">
+            <div class="row">
+              <div class="col-6 col-md-6">
+                <img
+                  [src]="prod.img"
+                  alt="{{ prod.titolo }}"
+                  class="img-fluid container-img"
+                />
+              </div>
+              <div class="col-6 col-md-6">
+                <div class="card-body mt-4">
+                  <h5 class="card-title">{{ prod.titolo }}</h5>
+                  <p class="card-text">Total Price: {{ prod.totalPrice }}</p>
+                  <div class="d-flex">
+                    <a (click)="add(prod)" class="btn btn-success me-2 px-3"
+                      ><i class="fas fa-plus"></i
+                    ></a>
+                    <a (click)="cestina(prod)" class="btn btn-warning px-3"
+                      ><i class="fas fa-trash-alt"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="isEmpty" class="container">
+        <div>
+          <h5 class="text-dark">
+            Stai acquistando {{ totalProducts }} prodotti con un prezzo totale di
+            {{ totalPrice }} Euro
+          </h5>
+        </div>
+        <button class="btn btn-success">PROCEDI AL CHECKOUT</button>
       </div>
     </div>
-    <div *ngIf="isEmpty">
-      <div class="" >
-        <h5 class="text-dark"> Stai acquistando {{ totalProducts }} prodotti con un prezzo totale di {{ totalPrice }} Euro </h5>
-      </div>
-      <button class="btn btn-success"> PROCEDI AL CHECKOUT </button>
-    </div>
+
   </div>
 </div>
-
