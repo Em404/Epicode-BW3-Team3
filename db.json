@@ -12,6 +12,16 @@
       "data-di-nascita": "2023-12-20",
       "genere": "non-binary",
       "id": 1
+    },
+    {
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$AXsnJqDlGd3M/knmh/cifOiwuodTqMLGMGcVw8T3wCRFfDoo7.QjC",
+      "nome": "Alessandro",
+      "cognome": "Forestiero",
+      "username": "etutor11",
+      "data-di-nascita": "2010-10-20",
+      "genere": "uomo",
+      "id": 2
     }
   ],
   "prodotti": [
@@ -75,5 +85,16 @@
       "id": 2
     }
   ],
-  "email": []
+  "email": [],
+  "preferiti": [
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "bellloeeffe",
+      "descrizione": "df tvg",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 2
+    }
+  ]
 }
