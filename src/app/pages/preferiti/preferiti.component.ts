@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../home/home.service';
 import { IProducts } from '../home/models/i-products';
 import { Subscription } from 'rxjs';
@@ -8,22 +8,24 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-preferiti',
   templateUrl: './preferiti.component.html',
-  styleUrl: './preferiti.component.scss'
+  styleUrls: ['./preferiti.component.scss']
 })
-export class PreferitiComponent {
+export class PreferitiComponent implements OnInit {
 
-  preferiti:IProducts[] = []
+  preferiti: IProducts[] = [];
+  isExpanded: boolean = false;
 
-  constructor(private homeService:HomeService, private router:Router){}
-ngOnInit(){
-  this.getAllFavourites()
-}
+  constructor(private homeService: HomeService, private router: Router) {}
 
-  getAllFavourites(){
-    this.homeService.getFavourite().subscribe(favourite =>{
-      if (favourite.length ) {
-         this.preferiti = favourite
-      }else{
+  ngOnInit() {
+    this.getAllFavourites();
+  }
+
+  getAllFavourites() {
+    this.homeService.getFavourite().subscribe(favourite => {
+      if (favourite.length) {
+        this.preferiti = favourite;
+      } else {
         Swal.fire({
           position: "top-end",
           icon: "warning",
@@ -32,20 +34,24 @@ ngOnInit(){
           showConfirmButton: false,
           timer: 2500
         });
-        this.router.navigate([''])
+        this.router.navigate(['']);
       }
-    })
+    });
   }
+
   RemoveFromFavourite(id: number) {
     this.homeService.removeFromFavourite(id).subscribe((prod) => {
       if (prod.titolo) {
-        Swal.fire(`Hai rimosso correttamente ${prod.titolo} dai tuoi preferiti`)
+        Swal.fire(`Hai rimosso correttamente ${prod.titolo} dai tuoi preferiti`);
         this.preferiti = this.preferiti.filter(pref => pref.id !== id);
-      } else{
-        Swal.fire(`Hai rimosso correttamente questo prodotto dai tuoi preferiti`)
+      } else {
+        Swal.fire(`Hai rimosso correttamente questo prodotto dai tuoi preferiti`);
         this.preferiti = this.preferiti.filter(pref => pref.id !== id);
       }
     });
   }
 
+  toggleCardExpansion() {
+    this.isExpanded = !this.isExpanded;
+  }
 }

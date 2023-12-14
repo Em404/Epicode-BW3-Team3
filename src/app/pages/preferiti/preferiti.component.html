@@ -1,15 +1,18 @@
 
-<div class="row ">
-
-  <div class="card text-end col-6 p-0 " *ngFor="let pref of preferiti" >
-    <img src="{{pref.img}}" alt="{{pref.titolo}}">
-    <h5 class="card-title">{{pref.titolo}}</h5>
-    <p class="card-text">{{pref.descrizione}}</p>
-    <p class="card-text">{{pref.prezzo}}</p>
-    <p class="card-text">Sono rimaste solo {{pref.quantita}} disponibili di {{pref.titolo}}</p>
-
-    <a  class="btn btn-primary">Vai alla pagina Prodotto</a>
-    <a (click)="RemoveFromFavourite(pref.id)" class="btn btn-primary">Rimuovi dai Preferiti</a>
-
+<div class="row">
+  <div class="card-container col-6" *ngFor="let pref of preferiti">
+    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image">
+    <div class="card-body">
+      <h5 class="card-title">{{ pref.titolo }}</h5>
+      <p class="card-text">{{ pref.descrizione }}</p>
+      <p class="card-text price">Prezzo: {{ pref.prezzo }}</p>
+      <p class="card-text quantity">Quantità rimasta: {{ pref.quantita }}</p>
+      <div class="button-group">
+        <a class="btn btn-primary">Vai alla pagina Prodotto</a>
+      </div>
+    </div>
+    <div class="remove-btn">
+      <button class="btn btn-danger" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
+    </div>
   </div>
 </div>
