@@ -32,6 +32,11 @@
 .babbo11 {
   animation: roteateAnimation 2s infinite;
 }
+#image-container {
+  height: 100vh;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
 
 .babbo {
   top: 25px;
@@ -138,16 +143,18 @@ body {
   width: 300px;
   height: 100px;
 }
-.shadow {
-  -webkit-box-shadow: 0px 0px 10px 5px #ffffff;
-  -moz-box-shadow: 0px 0px 10px 5px #ffffff;
-  -o-box-shadow: 0px 0px 10px 5px #ffffff;
-  box-shadow: 0px 0px 10px 5px #ffffff !important;
-}
-.img-prod {
+.shadow{-webkit-box-shadow: 0px 0px 10px 5px red;
+  -moz-box-shadow: 0px 0px 10px 5px red;
+  -o-box-shadow: 0px 0px 10px 5px red;
+  box-shadow: 0px 0px 10px 5px red !important;}
+.img-prod{
   width: 300px;
   height: 238px;
-  img {
+  -webkit-box-shadow: 5px 5px 10px 0px white;
+-moz-box-shadow: 5px 5px 10px 0px white;
+-o-box-shadow: 5px 5px 10px 0px white;
+box-shadow: 5px 5px 10px 0px withe;
+  img{
     object-fit: cover;
     height: 100%;
   }

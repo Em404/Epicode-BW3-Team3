@@ -13,12 +13,16 @@ import { ProdUserId } from './prod-user-id';
 })
 export class ProdUserComponent implements OnInit {
   userId!: number;
-  prodotti: IProducts[] = [];
-  id!:number
+  ProduserArr:ProdUserId[] = []
+  produser:ProdUserId ={
+    prodotti: [],
+    userId: 0,
+    id: 0
+  }
   constructor(
     private route: ActivatedRoute,
     private prodUser: ProdUserService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit() {
@@ -28,10 +32,9 @@ export class ProdUserComponent implements OnInit {
       this.prodUser.getByUserId(this.userId).subscribe(
         (prodUser: ProdUserId[]) => {
 
+          this.ProduserArr = prodUser
           prodUser.map((prod:ProdUserId) => {
-            console.log(prod);
-            this.id = prod.id;
-            this.prodotti = prod.prodotti;
+            this.produser = prod
           });
         },
       );
@@ -40,27 +43,29 @@ export class ProdUserComponent implements OnInit {
 
 
     delete(id: number): void {
+
       Swal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        title: 'Sei sicuro?',
+        text: "Non potrai più tornare indietro!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        confirmButtonText: 'Si, Eliminalo!'
       }).then((result) => {
         if (result.isConfirmed) {
-          this.prodotti = this.prodotti.filter(product => product.id !== id);
           this.prodUser.deleteByUserId(id).subscribe(
             () => {
 
+              this.produser.prodotti.map(prod =>{
+                this.deleteProducts(prod.id)
+              })
+            })
               Swal.fire({
-                title: 'Deleted!',
-                text: 'Your file has been deleted.',
+                title: 'Eliminato!',
+                text: 'Il tuo prodotto è stato eliminato ',
                 icon: 'success'
               }).then(()=>{
-
-              })
             },
             (error) => {
               console.error('Error deleting the product', error);
@@ -75,5 +80,10 @@ export class ProdUserComponent implements OnInit {
       });
     }
 
-
+    private deleteProducts(id:number){
+      const indexToRemove = this.produser.prodotti.findIndex(product => product.id === id);
+      if (indexToRemove !== -1) {
+        this.produser.prodotti.splice(indexToRemove, 1);
+      }
+    }
 }
