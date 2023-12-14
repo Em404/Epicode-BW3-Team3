@@ -22,6 +22,16 @@
       "data-di-nascita": "2023-11-30",
       "genere": "donna",
       "id": 2
+    },
+    {
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$sXBB4vRhAZO3fJWkwQGf8OizMRIrBby9j4ThAQwmunBIPYADnxN1m",
+      "nome": "Alessandro",
+      "cognome": "Forestiero",
+      "username": "ale",
+      "data-di-nascita": "1885-10-27",
+      "genere": "non-specificato",
+      "id": 3
     }
   ],
   "prodotti": [
@@ -170,6 +180,5 @@
       "id": 5
     }
   ],
-
   "email": []
 }
