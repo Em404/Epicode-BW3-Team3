@@ -1,7 +1,8 @@
-<div class="container d-flex flex-column justify-content-center align-items-center outer-register-div py-5">
+<div class="bg-form">
+<div class="container d-flex flex-column justify-content-center align-items-center outer-register-div">
   <div class="justify-content-center">
-    <form class="border-bottom pb-4" #f="ngForm" (ngSubmit)="register(f)">
-      <p class="h3 mb-4 fw-normal text-center">Registra un Account</p>
+    <form class="border-bottom border-white pb-4" #f="ngForm" (ngSubmit)="register(f)">
+      <p class="h2 mb-4 fw-normal text-center">Registra un Account</p>
       <div class="row form-row">
         <div class="col col-12 col-md-6 mb-2">
           <div class="form-floating mb-2">
@@ -80,4 +81,5 @@
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
+</div>
 </div>

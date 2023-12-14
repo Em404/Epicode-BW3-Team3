@@ -5,51 +5,21 @@
   "users": [
     {
       "email": "samueletoscano@hotmail.com",
-      "password": "$2a$10$MK9E44eTTUC9Jo0/FRTPeOuy6by7bs6SJgCHrO8PE5KokGy5WsCAy",
+      "password": "$2a$10$/myjaCUINK3mPzOLdILgAuQ1mReC5D9MiVFjFCHZapPY.XC1CeMJm",
       "nome": "errgrgrg4g343g",
       "cognome": "samuele",
       "username": "sa23321",
-      "data-di-nascita": "2023-12-12",
-      "genere": "web-developer",
-      "id": 1
-    },
-    {
-      "email": "ciao20@gmail.com",
-      "password": "$2a$10$SPOsCevSuKaSLLMweJCg...IKHe9z/lujoGPYt5KccL8h//mEFpe6",
-      "nome": "errgrgrg4g343g",
-      "cognome": "samuele",
-      "username": "sa23321cddweewf",
-      "data-di-nascita": "2023-11-30",
-      "genere": "donna",
-      "id": 2
-    },
-    {
-      "email": "ferozorady@mailinator.com",
-      "password": "$2a$10$9XPrRtLmHyyGerZhoxZzFO.ueELFphu8k2JG3jqxtLKupklK5wskK",
-      "nome": "Eveniet omnis itaqu",
-      "cognome": "Exercitation qui exe",
-      "username": "qajez",
-      "data-di-nascita": "1999-02-16",
+      "data-di-nascita": "2023-12-20",
       "genere": "non-binary",
-      "id": 3
-    },
-    {
-      "email": "henosal@mailinator.com",
-      "password": "$2a$10$/4iWeyjVo9q4hkhD5uleAeZCTsrm1S3P3gzAVIbM6gZpUHWGoC.RS",
-      "nome": "Harum ea et minus no",
-      "cognome": "Doloremque omnis acc",
-      "username": "cehemy",
-      "data-di-nascita": "2011-09-11",
-      "genere": "non-specificato",
-      "id": 4
+      "id": 1
     }
   ],
   "prodotti": [
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "kumuu",
+      "titolo": "bellloeeffe",
+      "descrizione": "df tvg",
       "prezzo": 32323,
       "quantita": 2,
       "id": 1
@@ -57,8 +27,8 @@
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "tth",
+      "titolo": "bellloeeffe",
+      "descrizione": "df tvg",
       "prezzo": 32323,
       "quantita": 2,
       "id": 2
@@ -66,139 +36,11 @@
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "ettrhthh",
+      "titolo": "bellloeeffec",
+      "descrizione": "dcd",
       "prezzo": 32323,
       "quantita": 2,
       "id": 3
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "verregtb",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 4
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "ewfewfeewf",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 5
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "nntytnrfsddbffd",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 6
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "bgfbtrrt",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 7
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "gttgtgg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 8
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "ewfeef",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 9
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "htrrththtrh",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 10
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "htrrththtrh",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 11
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "htrrththtrh",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 12
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "fewewewf",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 13
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "belllo",
-      "descrizione": "fewewewf",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 14
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://www.pazawaxep.png",
-      "titolo": "Irure eaque in nihil",
-      "descrizione": "Alias vitae fugiat d",
-      "prezzo": 47,
-      "quantita": 64,
-      "id": 15
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://www.jenyxoba.png",
-      "titolo": "Est culpa vel simil",
-      "descrizione": "Consequatur Unde in",
-      "prezzo": 60,
-      "quantita": 65,
-      "id": 16
-    }
-  ],
-  "preferiti": [
-    {
-      "totalPrice": 0,
-      "img": "https://www.pazawaxep.png",
-      "titolo": "Irure eaque in nihil",
-      "descrizione": "Alias vitae fugiat d",
-      "prezzo": 47,
-      "quantita": 64,
-      "id": 15
     }
   ],
   "userProd": [
@@ -207,46 +49,33 @@
         {
           "totalPrice": 0,
           "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "belllo",
-          "descrizione": "bgfbtrrt",
+          "titolo": "bellloeeffe",
+          "descrizione": "df tvg",
           "prezzo": 32323,
           "quantita": 2,
           "id": 0
         }
       ],
-      "userId": 2,
-      "id": 5
+      "userId": 1,
+      "id": 1
     },
     {
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://www.pazawaxep.png",
-          "titolo": "Irure eaque in nihil",
-          "descrizione": "Alias vitae fugiat d",
-          "prezzo": 47,
-          "quantita": 64,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "bellloeeffec",
+          "descrizione": "dcd",
+          "prezzo": 32323,
+          "quantita": 2,
           "id": 0
         }
       ],
-      "userId": 3,
-      "id": 6
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://www.jenyxoba.png",
-          "titolo": "Est culpa vel simil",
-          "descrizione": "Consequatur Unde in",
-          "prezzo": 60,
-          "quantita": 65,
-          "id": 0
-        }
-      ],
-      "userId": 4,
-      "id": 7
+      "userId": 1,
+      "id": 2
     }
   ],
-  "email": []
+  "email": [],
+  "preferiti":[]
+
 }

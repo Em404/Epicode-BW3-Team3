@@ -6,6 +6,7 @@ import { HeaderService } from '../../components/header/header.service';
 import { Subscription } from 'rxjs';
 import Swal from 'sweetalert2';
 import { CartService } from '../../components/cart/cart.service';
+import { ProdUserService } from '../../prod-user/prod-user.service';
 
 @Component({
   selector: 'app-prodotto',
@@ -20,7 +21,8 @@ export class ProdottoComponent implements OnInit {
     private homeService: HomeService,
     private headerService: HeaderService,
     private router: Router,
-    private cartService:CartService
+    private cartService:CartService,
+    private prodUserService:ProdUserService
      ) {}
 
   showNav: boolean = false;
@@ -40,6 +42,7 @@ export class ProdottoComponent implements OnInit {
 
     this.route.params.subscribe((params: any) => {
       this.homeService.getProductsById(params.id).subscribe((res) => {
+        console.log(res);
 
         if (res.quantita > 0) {
           this.prodotto = res;
@@ -49,6 +52,7 @@ export class ProdottoComponent implements OnInit {
           });
         }
       });
+
     });
 
 
