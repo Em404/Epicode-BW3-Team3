@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { IProducts } from '../pages/home/models/i-products';
 import { Observable } from 'rxjs';
-import { ProdUser } from '../prod-user';
 import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler';
+import { ProdUser } from './prod-user';
+import { ProdUserId } from './prod-user-id';
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +18,8 @@ userProdUrl:string = 'http://localhost:3000/userProd'
      return this.http.post<ProdUser>(this.userProdUrl, obj)
    }
 
-   getByUserId(userId: number): Observable<ProdUser> {
-    return this.http.get<ProdUser>(`${this.userProdUrl}?userId=${userId}`);
+   getByUserId(userId: number): Observable<ProdUserId[]> {
+    return this.http.get<ProdUserId[]>(`${this.userProdUrl}?userId=${userId}`);
   }
 
    getProdUser():Observable<ProdUser>{

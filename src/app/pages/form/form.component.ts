@@ -5,7 +5,7 @@ import { IProducts } from '../home/models/i-products';
 import Swal from 'sweetalert2';
 import { ProdUserService } from '../../prod-user/prod-user.service';
 import { AuthService } from '../auth/auth.service';
-import { ProdUser } from '../../prod-user';
+import { ProdUser } from '../../prod-user/prod-user';
 
 @Component({
   selector: 'app-form',

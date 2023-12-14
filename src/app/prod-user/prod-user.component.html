@@ -1,11 +1,18 @@
-  <h2>I tuoi prodotti</h2>
-  <ul>
-    <li *ngFor="let product of prodotti">
-      <h3>{{ product.titolo }}</h3>
-      <p>{{ product.descrizione }}</p>
-      <p>Prezzo: {{ product.prezzo }}</p>
-      <button (click)="edit(product.id)">Modifica</button>
-      <button (click)="delete(product.id)">Elimina</button>
-    </li>
-  </ul>
+<h2 class="text-center"> I TUOI PRODOTTI </h2>
+<div class="row " *ngIf="prodotti.length > 0 ">
 
+  <div class="card text-end col-6 p-0 " *ngFor="let prod of prodotti" >
+    <img src="{{prod.img}}" alt="{{prod.titolo}}">
+    <h5 class="card-title">{{prod.titolo}}</h5>
+    <p class="card-text">{{prod.descrizione}}</p>
+    <p class="card-text">{{prod.prezzo}}</p>
+    <p class="card-text">Sono rimaste solo {{prod.quantita}} disponibili di {{prod.titolo}}</p>
+
+    <a  class="btn btn-primary" >Vai alla pagina Prodotto</a>
+    <a (click)="delete(prod.id)" class="btn btn-primary">Rimuovi dai Preferiti</a>
+
+  </div>
+</div>
+<div *ngIf="prodotti.length === 0" class="alert alert-danger">
+  <p>Nessun prodotto trovato per questo utente.</p>
+</div>
