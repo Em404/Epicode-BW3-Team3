@@ -30,7 +30,7 @@ export class HeaderComponent {
     password: '',
     genere: '',
     data_di_nascita: 0,
-    id: 0
+    id: 0,
   }
 
   userSubscription!: Subscription

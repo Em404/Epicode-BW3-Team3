@@ -20,6 +20,7 @@ export class HomeComponent {
   product!: IProducts[];
   styleProduct!:any[]
   isButtonHovered:boolean=false;
+  isVisible:boolean = false
   route: any;
   authService: any;
   user: any;
@@ -28,9 +29,12 @@ export class HomeComponent {
   ngOnInit() {
     this.startCarosello()
     this.homeService.getAllProducts().subscribe(products => {
-      this.product = products;
-     this.styleProduct = [...this.product];
-     for(let p of this.styleProduct) p.hover=false
+      if (products.length) {
+        this.product = products;
+       this.styleProduct = [...this.product];
+       for(let p of this.styleProduct) p.hover=false
+       this.isVisible = true
+      }
     });
   }
 

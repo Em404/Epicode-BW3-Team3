@@ -11,8 +11,8 @@
             <h5 class="mb-3">Iscriviti alla nostra newsletter</h5>
             <div class="d-flex flex-column flex-lg-row w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Indirizzo email</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo email">
-              <button class="button" type="button">Iscriviti</button>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Indirizzo email" [(ngModel)] = "email" name="email">
+              <button class="button" type="button" (click)="iscriviti()">Iscriviti</button>
             </div>
           </form>
         </div>

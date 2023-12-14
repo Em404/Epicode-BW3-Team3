@@ -8,6 +8,7 @@ import { Ilogin } from './models/ilogin';
 import { BehaviorSubject, Subject, Observable, tap, catchError, throwError, map } from 'rxjs';
 import { IAccessData } from './models/i-access-data';
 import { IUser } from './models/i-user';
+import { IProducts } from '../home/models/i-products';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +39,12 @@ export class AuthService {
     this.restoreUser()
   }
 
+  sendData(obj:IProducts):Observable<IProducts>{
+    return this.http.post<IProducts>(this.userUrl, obj)
+  }
+  updateUserProducts(user: IUser): Observable<IUser> {
+    return this.http.put<IUser>(`${this.userUrl}/${user.id}`, user);
+  }
   login(obj: Ilogin): Observable<IAccessData> {
     return this.http.post<IAccessData>(this.loginUrl, obj)
     .pipe(tap(data => {
@@ -117,5 +124,8 @@ export class AuthService {
   updateUserInfo(obj: IUser):Observable<IUser> {
     console.log(obj);
     return this.http.put<IUser>(`${this.userUrl}/${obj.id}`,obj);
+  }
+  newsLetter(email:string):Observable<string>{
+    return this.http.post<string>('http://localhost:3000/email', email)
   }
 }

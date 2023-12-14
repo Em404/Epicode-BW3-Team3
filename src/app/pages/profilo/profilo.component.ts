@@ -30,7 +30,7 @@ export class ProfiloComponent {
 
   loadingSubscription!:Subscription;
   errorSubscription!:Subscription;
-    userId!:number;
+
   user:IUser = {
     nome: '',
     cognome: '',
@@ -39,16 +39,22 @@ export class ProfiloComponent {
     password: '',
     genere: '',
     data_di_nascita: 0,
-    id: 0
+    id: 0,
   }
 
+  userId!:number;
   ngOnInit() {
+    this.authService.user$.subscribe(user =>{
+      this.userId = user.user.id
+
+    })
     this.route.params.subscribe((params: any) => {
      this.authService.getUserById(params.id).subscribe((res) => {
       this.user = res;
       this.userId = params.id
       })
     });
+
   }
 
   update(form:NgForm) {
@@ -64,6 +70,7 @@ export class ProfiloComponent {
     if (!form.form.value.email) form.form.value.email = this.user.email;
     if (!form.form.value.password) form.form.value.password = this.user.password;
     if (!form.form.value.genere) form.form.value.genere = this.user.genere;
+
     form.form.value.id = this.user.id;
     console.log(form.form.value)
     this.startLoading();
@@ -76,10 +83,17 @@ export class ProfiloComponent {
         return;
       }
       const temporaryObj:any = {...form.form.value};
+
       delete temporaryObj["conferma-password"];
       this.user = {...temporaryObj}
-      this.user.id = this.userId
-      this.authService.updateUserInfo(this.user).subscribe(res => this.router.navigate(['/']))
+      console.log(this.user)
+
+      this.authService.updateUserInfo(this.user).subscribe(res => {
+        console.log(res);
+
+        this.user = res
+        this.router.navigate(['/'])
+      })
     })
   }
 
