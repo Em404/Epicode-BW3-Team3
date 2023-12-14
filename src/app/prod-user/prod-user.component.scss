@@ -1,0 +1,71 @@
+h2.text-center {
+  color: #c0c0c0;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: -6px 6px 15px rgba(0, 0, 0, 0.5), 6px -6px 15px rgba(255, 255, 255, 0.8);
+  margin-top: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 5px red;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title,
+.card-text,
+.btn {
+  color: white;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  background-color: #f40009;
+  border: 2px solid #f40009;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #f40009;
+}
+
+.alert-danger {
+  color: #c63546;
+  background-color: #f4deb2;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+}

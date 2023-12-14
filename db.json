@@ -22,6 +22,26 @@
       "data-di-nascita": "2023-11-30",
       "genere": "donna",
       "id": 2
+    },
+    {
+      "email": "ferozorady@mailinator.com",
+      "password": "$2a$10$9XPrRtLmHyyGerZhoxZzFO.ueELFphu8k2JG3jqxtLKupklK5wskK",
+      "nome": "Eveniet omnis itaqu",
+      "cognome": "Exercitation qui exe",
+      "username": "qajez",
+      "data-di-nascita": "1999-02-16",
+      "genere": "non-binary",
+      "id": 3
+    },
+    {
+      "email": "henosal@mailinator.com",
+      "password": "$2a$10$/4iWeyjVo9q4hkhD5uleAeZCTsrm1S3P3gzAVIbM6gZpUHWGoC.RS",
+      "nome": "Harum ea et minus no",
+      "cognome": "Doloremque omnis acc",
+      "username": "cehemy",
+      "data-di-nascita": "2011-09-11",
+      "genere": "non-specificato",
+      "id": 4
     }
   ],
   "prodotti": [
@@ -150,9 +170,37 @@
       "prezzo": 32323,
       "quantita": 2,
       "id": 14
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://www.pazawaxep.png",
+      "titolo": "Irure eaque in nihil",
+      "descrizione": "Alias vitae fugiat d",
+      "prezzo": 47,
+      "quantita": 64,
+      "id": 15
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://www.jenyxoba.png",
+      "titolo": "Est culpa vel simil",
+      "descrizione": "Consequatur Unde in",
+      "prezzo": 60,
+      "quantita": 65,
+      "id": 16
     }
   ],
-  "preferiti": [],
+  "preferiti": [
+    {
+      "totalPrice": 0,
+      "img": "https://www.pazawaxep.png",
+      "titolo": "Irure eaque in nihil",
+      "descrizione": "Alias vitae fugiat d",
+      "prezzo": 47,
+      "quantita": 64,
+      "id": 15
+    }
+  ],
   "userProd": [
     {
       "prodotti": [
@@ -168,8 +216,37 @@
       ],
       "userId": 2,
       "id": 5
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://www.pazawaxep.png",
+          "titolo": "Irure eaque in nihil",
+          "descrizione": "Alias vitae fugiat d",
+          "prezzo": 47,
+          "quantita": 64,
+          "id": 0
+        }
+      ],
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://www.jenyxoba.png",
+          "titolo": "Est culpa vel simil",
+          "descrizione": "Consequatur Unde in",
+          "prezzo": 60,
+          "quantita": 65,
+          "id": 0
+        }
+      ],
+      "userId": 4,
+      "id": 7
     }
   ],
-
   "email": []
 }
