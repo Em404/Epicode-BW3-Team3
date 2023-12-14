@@ -17,9 +17,10 @@ userProdUrl:string = 'http://localhost:3000/userProd'
      return this.http.post<ProdUser>(this.userProdUrl, obj)
    }
 
-   getByUserId(userId:number):Observable<ProdUser>{
-    return this.http.get<ProdUser>(`${this.userProdUrl}/${userId}`)
-   }
+   getByUserId(userId: number): Observable<ProdUser> {
+    return this.http.get<ProdUser>(`${this.userProdUrl}?userId=${userId}`);
+  }
+
    getProdUser():Observable<ProdUser>{
     return this.http.get<ProdUser>(this.userProdUrl)
    }

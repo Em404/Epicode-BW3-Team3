@@ -1,20 +1,11 @@
-<div *ngIf="userId">
-  <h2 class="text-center">I miei prodotti </h2>
+  <h2>I tuoi prodotti</h2>
+  <ul>
+    <li *ngFor="let product of prodotti">
+      <h3>{{ product.titolo }}</h3>
+      <p>{{ product.descrizione }}</p>
+      <p>Prezzo: {{ product.prezzo }}</p>
+      <button (click)="edit(product.id)">Modifica</button>
+      <button (click)="delete(product.id)">Elimina</button>
+    </li>
+  </ul>
 
-  <div *ngFor="let prodotto of prodotti">
-    <div class="prodotto">
-      <img [src]="prodotto.img" alt="{{ prodotto.titolo }}">
-      <h3>{{ prodotto.titolo }}</h3>
-      <p>{{ prodotto.descrizione }}</p>
-      <p>Prezzo: {{ prodotto.prezzo }} €</p>
-      <p>Quantità disponibile: {{ prodotto.quantita }}</p>
-    </div>
-    <a class="btn btn-warning" (click)="edit(prodotto.id)">Modifica</a>
-    <a class="btn btn-danger"(click)="delete(prodotto.id)">Elimina </a>
-
-  </div>
-</div>
-
-<div *ngIf="!userId">
-  <p>Id utente non valido.</p>
-</div>

@@ -24,42 +24,49 @@ export class ProdUserComponent {
   prodotti: IProducts[] = [];
   ngOnInit() {
     this.route.params.subscribe((params: any) => {
-      this.userId = params.id;
-      if (this.userId) {
-        this.prodUser.getByUserId(this.userId).subscribe(
-          (prodUser: ProdUser) => {
-            this.prodotti = prodUser.prodotti;
-          },
-          (error) => {
-            Swal.fire('Errore durante il caricamento della pagina').then(() => {
-              this.router.navigate(['']);
-            });
-          }
-        );
-      }
+      const userIdParam = params.userId;
+      console.log('UserId Param:', userIdParam); // Assicurati che userIdParam sia corretto
+
+      this.prodUser.getByUserId(userIdParam).subscribe(
+        (prodUser) => {
+          console.log('ProdUser:', prodUser);
+          this.prodotti = prodUser.prodotti;
+        },
+        (error) => {
+          console.error('Errore durante il caricamento della pagina', error);
+        }
+      );
     });
+
   }
   edit(id:number){
 
   }
   delete(id:number){
-    this.prodUser.deleteByUserId(this.userId).subscribe(() => {
 
       Swal.fire({
-        title: "Prodotti eliminati",
-        text: "Tutti i prodotti associati a questo utente sono stati eliminati",
-        icon: "success"
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.prodUser.deleteByUserId(this.userId).subscribe(() => {
+            this.prodotti = this.prodotti.filter(product => product.id !== id);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        })
+      }
       });
-    }, (error) => {
-      console.error("Errore durante l'eliminazione dei prodotti:", error);
-      Swal.fire({
-        title: "Errore",
-        text: "Si è verificato un errore durante l'eliminazione dei prodotti. Riprova più tardi.",
-        icon: "error"
-      });
-    });
 
+    }
 
   }
-}
+
 

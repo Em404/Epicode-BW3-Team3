@@ -30,7 +30,6 @@ export class ProfiloComponent {
 
   loadingSubscription!:Subscription;
   errorSubscription!:Subscription;
-    userId!:number;
 
   user:IUser = {
     nome: '',
@@ -43,13 +42,19 @@ export class ProfiloComponent {
     id: 0,
   }
 
+  userId!:number;
   ngOnInit() {
+    this.authService.user$.subscribe(user =>{
+      this.userId = user.user.id
+
+    })
     this.route.params.subscribe((params: any) => {
      this.authService.getUserById(params.id).subscribe((res) => {
       this.user = res;
       this.userId = params.id
       })
     });
+
   }
 
   update(form:NgForm) {
