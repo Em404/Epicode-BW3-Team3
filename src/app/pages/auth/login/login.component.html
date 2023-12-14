@@ -1,7 +1,7 @@
+<div class="bg-form">
 <div class="container d-flex flex-column justify-content-center align-items-center outer-login-div">
-  <div>
-    <form class="border-bottom pb-5" #f="ngForm" (ngSubmit)="login(f)">
-      <p class="h3 mb-3 fw-normal text-center">Effettua il login</p>
+    <form class="border-bottom border-white pb-5" #f="ngForm" (ngSubmit)="login(f)">
+      <p class="h2 mb-3 fw-normal text-center">Effettua il login</p>
       <div class="form-floating mb-2">
         <input ngModel #email="ngModel" name="email" type="email" class="form-control" required [pattern]="emailRegex" [ngClass]="{'error': notExistingUser}">
         <label for="floatingInput" id="email-error" [ngClass]="{'error': notExistingUser}">Email*</label>
@@ -10,7 +10,7 @@
       <div class="form-floating mb-2">
         <input ngModel #password="ngModel" name="password" type="password" class="form-control" required [ngClass]="{'error': wrongPassword}">
         <label for="floatingInput" id="password-error" [ngClass]="{'error': wrongPassword}">Password*</label>
-        <a class="text-secondary">Password dimenticata?</a>
+        <a class="text-black">Password dimenticata?</a>
       </div>
       <p class="mb-1 position-relative error" *ngIf="wrongPassword">Password errata</p>
       <div class="form-check text-start my-3">
@@ -23,11 +23,11 @@
       <p class="mt-2">Non hai ancora un account?</p>
       <a class="btn btn-outline-success" routerLink="/auth/register">Registrati ora!</a>
     </div>
-  </div>
   <div class="alert text-white position-fixed error-message" *ngIf="error">Si è verificato un errore</div>
 </div>
 <div class="outer-spinner-div position-fixed d-flex justify-content-center align-items-center" *ngIf="loading">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
+</div>
 </div>
