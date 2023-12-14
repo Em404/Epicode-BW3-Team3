@@ -18,11 +18,11 @@
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
+      "titolo": "bellloeeffec",
+      "descrizione": "dcd",
       "prezzo": 32323,
       "quantita": 2,
-      "id": 1
+      "id": 3
     }
   ],
   "prodotti": [
@@ -86,6 +86,5 @@
       "id": 2
     }
   ],
-  "email": [],
-
+  "email": []
 }

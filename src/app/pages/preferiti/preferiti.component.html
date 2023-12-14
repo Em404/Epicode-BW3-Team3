@@ -1,7 +1,9 @@
 
-<div class="row">
-  <div class="card-container col-6" *ngFor="let pref of preferiti">
-    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image">
+
+<h2 class="text-center fs-1 mt-2"> PREFERITI </h2>
+<div class="row my-5" *ngIf="preferiti" >
+  <div class="card-container col-6 p-0" *ngFor="let pref of preferiti">
+    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image ">
     <div class="card-body">
       <h5 class="card-title">{{ pref.titolo }}</h5>
       <p class="card-text">{{ pref.descrizione }}</p>
@@ -15,4 +17,8 @@
       <button class="btn btn-danger" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
     </div>
   </div>
+</div>
+
+<div *ngIf="!preferiti">
+  <p> Aggiungi qualcosa ai preferiti </p>
 </div>
