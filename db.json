@@ -24,17 +24,6 @@
       "id": 2
     }
   ],
-  "preferiti": [
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 1
-    }
-  ],
   "prodotti": [
     {
       "totalPrice": 0,
@@ -101,11 +90,11 @@
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
+      "titolo": "bellloeeffec",
+      "descrizione": "dcd",
       "prezzo": 32323,
       "quantita": 2,
-      "id": 2
+      "id": 3
     }
   ]
 }
