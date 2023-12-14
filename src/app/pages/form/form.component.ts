@@ -51,11 +51,9 @@ export class FormComponent {
 
              this.prodUserService.addToMyProduct(this.produser).subscribe(
         (data) => {
-          console.log(data);
           Swal.fire('Prodotto aggiunto correttamente');
         },
         (error) => {
-          console.error(`Errore durante l'aggiunta del prodotto:`, error);
           Swal.fire(`Errore durante l'aggiunta del prodotto`);
         }
       );

@@ -1,18 +1,19 @@
-<h2 class="text-center"> I TUOI PRODOTTI </h2>
-<div class="row " *ngIf="prodotti.length > 0 ">
+<h2 class="text-center"> I MIEI PRODOTTI </h2>
+<div class="row " *ngIf="produser.prodotti.length">
 
-  <div class="card text-end col-6 p-0 " *ngFor="let prod of prodotti" >
+  <div class="card text-end col-6 p-0 " *ngFor="let prod of produser.prodotti" >
     <img src="{{prod.img}}" alt="{{prod.titolo}}">
     <h5 class="card-title">{{prod.titolo}}</h5>
     <p class="card-text">{{prod.descrizione}}</p>
     <p class="card-text">{{prod.prezzo}}</p>
     <p class="card-text">Sono rimaste solo {{prod.quantita}} disponibili di {{prod.titolo}}</p>
 
-    <a  class="btn btn-primary" [routerLink]="'/prodotto/' + prod.id" >Vai alla pagina Prodotto</a>
-    <a (click)="delete(prod.id)" class="btn btn-primary">Rimuovi dai Preferiti</a>
+    <a  class="btn btn-primary" [routerLink]="'/prodotto/' + produser.id" >Vai alla pagina Prodotto</a>
+    <a (click)="delete(produser.id); " class="btn btn-primary">Elimina Prodotto</a>
 
-  </div>
+ </div>
+ <a routerLink="/" class="btn btn-success">Torna alla Home Page</a>
 </div>
-<div *ngIf="prodotti.length === 0" class="alert alert-danger">
+<div *ngIf="!produser.prodotti.length" class="alert alert-danger">
   <p>Nessun prodotto trovato per questo utente.</p>
 </div>
