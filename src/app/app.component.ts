@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bw3-app';
+  mostraPagina = true;
+
+  constructor() {
+    setTimeout(() => {
+      this.mostraPagina = false;
+    }, 4500);
+  }
 }

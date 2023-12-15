@@ -4,12 +4,11 @@
   },
   "users": [
     {
-      "email": "samueletoscano@hotmail.com",
-      "password": "$2a$10$/myjaCUINK3mPzOLdILgAuQ1mReC5D9MiVFjFCHZapPY.XC1CeMJm",
-      "nome": "errgrgrg4g343g",
+      "nome": "michelino ",
       "cognome": "samuele",
-      "username": "sa23321",
-      "data-di-nascita": "2023-12-20",
+      "username": "mikimiki",
+      "email": "samueletoscano@hotmail.com",
+      "password": "$2a$10$cAiTtK.XgawXeVn0qbsse.QsskqI3RgEUwawiaDqvBV2LTvWMltWS",
       "genere": "non-binary",
       "id": 1
     },
@@ -51,6 +50,15 @@
       "prezzo": 32323,
       "quantita": 2,
       "id": 1
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "bellloeeffec",
+      "descrizione": "ciao bello",
+      "prezzo": 25,
+      "quantita": 2,
+      "id": 2
     }
   ],
   "userProd": [
@@ -68,18 +76,23 @@
       ],
       "userId": 1,
       "id": 1
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "bellloeeffec",
+          "descrizione": "ciao bello",
+          "prezzo": 25,
+          "quantita": 2,
+          "id": 0
+        }
+      ],
+      "userId": 1,
+      "id": 2
     }
   ],
   "email": [],
-  "preferiti": [
-    {
-      "totalPrice": 0,
-      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
-      "titolo": "Corso Html+Css+Js",
-      "descrizione": "Corso di web development",
-      "prezzo": 1,
-      "quantita": 1,
-      "id": 1
-    }
-  ]
+  "preferiti": []
 }
