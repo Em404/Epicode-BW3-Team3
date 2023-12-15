@@ -5,7 +5,8 @@
   background: linear-gradient(to bottom,#570D02,#8C1502);
 }
 .cart-content {
-  max-width: 450px
+  max-width: 450px;
+  padding-top: 35px;
 }
 .cart-div{
   overflow-y: auto;
@@ -46,9 +47,18 @@
   }
 }
 
+.card-title-cart{
+  font-weight: bold;
+    font-size: 30px;
+}
+.quanita{
+  font-size: 25px;
+  text-align: center;
+}
 .container-img{
-  width: 300px;
-  height: 200px;
+ height: 100%;
+ object-fit: cover;
+    overflow: hidden;
 }
 
 

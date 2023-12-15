@@ -1,18 +1,29 @@
+<div class="bg-pref py-5">
+  <div class="d-flex justify-content-center">
+    <h2 class="fs-1 button text-center pref-btn"> PREFERITI </h2>
+  </div>
+  <div class="row" *ngIf="preferiti">
+    <div class="card-container col-6 p-0 card-bg" *ngFor="let pref of preferiti">
+      <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image">
+      <div class="card-body">
+        <h5 class="card-title ">{{ pref.titolo }}</h5>
+        <p class="card-text  ">{{ pref.descrizione }}</p>
+        <p class="card-text price  ">Prezzo: {{ pref.prezzo }}€</p>
+        <p class="card-text quantity">Quantità rimasta: {{ pref.quantita }}</p>
+        <div class="button-group">
+          <div>
+            <div class="mb-2">
+              <a [routerLink]="'/prodotto/'+ pref.id" class="button">Vai alla pagina Prodotto </a>
+            </div>
+            <button class="button" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
+          </div>
+        </div>
 
-<div class="row">
-  <div class="card-container col-6" *ngFor="let pref of preferiti">
-    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image">
-    <div class="card-body">
-      <h5 class="card-title">{{ pref.titolo }}</h5>
-      <p class="card-text">{{ pref.descrizione }}</p>
-      <p class="card-text price">Prezzo: {{ pref.prezzo }}</p>
-      <p class="card-text quantity">Quantità rimasta: {{ pref.quantita }}</p>
-      <div class="button-group">
-        <a class="btn btn-primary" [routerLink]="'/prodotto/' + pref.id">Vai alla pagina Prodotto</a>
+
       </div>
     </div>
-    <div class="remove-btn">
-      <button class="btn btn-danger" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
+
+    <div *ngIf="!preferiti">n
+      <p> Aggiungi qualcosa ai preferiti </p>
     </div>
   </div>
-</div>

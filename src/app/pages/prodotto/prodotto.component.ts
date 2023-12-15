@@ -28,8 +28,18 @@ export class ProdottoComponent implements OnInit {
   showNav: boolean = false;
   showCart!: boolean;
   preferiti: IProducts[] = [];
-  prodotto!: IProducts
+  prodotto: IProducts= {
+    totalPrice: 0,
+    img: '',
+    titolo: '',
+    descrizione: '',
+    prezzo: 0,
+    quantita: 0,
+    id: 0
+  }
+  quantityOptions: number[] = [];
 
+  selectedQuantity!: number;
 
   ngOnInit() {
     this.headerService.showCart$.subscribe(data => {
@@ -46,6 +56,7 @@ export class ProdottoComponent implements OnInit {
 
         if (res.quantita > 0) {
           this.prodotto = res;
+          this.populateQuantityOptions()
         } else {
           Swal.fire('Questo prodotto non è più disponibile').then(result => {
             this.router.navigate(['']);
@@ -59,6 +70,13 @@ export class ProdottoComponent implements OnInit {
 
   }
 
+  populateQuantityOptions() {
+    for (let i = 1; i <= this.prodotto.quantita; i++) {
+      this.quantityOptions.push(i);
+    }
+
+    this.selectedQuantity = 1;
+  }
   toggleShowNav(): void {
     this.showNav = !this.showNav;
   }

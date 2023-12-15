@@ -19,6 +19,7 @@ export class ProdUserComponent implements OnInit {
     userId: 0,
     id: 0
   }
+  prodotto!:IProducts
   constructor(
     private route: ActivatedRoute,
     private prodUser: ProdUserService,
@@ -35,11 +36,13 @@ export class ProdUserComponent implements OnInit {
           this.ProduserArr = prodUser
           prodUser.map((prod:ProdUserId) => {
             this.produser = prod
+
+            })
           });
         },
       );
-    });
-  }
+    }
+
 
 
     delete(id: number): void {

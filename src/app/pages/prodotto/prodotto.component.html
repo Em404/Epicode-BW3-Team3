@@ -1,20 +1,39 @@
+<div class="productPage">
+  <div class="container py-4 ">
 
-<div class="container w-50">
-<div class="card text-center mt-5">
-  <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}">
-    <h2 class="card-title">{{prodotto.titolo}}</h2>
-    <h4 class="card-text">{{prodotto.descrizione}}</h4>
-    <h5 class="card-text">{{prodotto.prezzo+'$'}}</h5>
-    <p class="card-text">Sono rimaste solo {{prodotto.quantita}} disponibili di {{prodotto.titolo}}</p>
-    <div>
-      <div class="d-flex align-items-center justify-content-center">
-    <a (click)="toggleAll();
-    addToCart()"
-     class="btn btn-primary me-2"
-     >Aggiungi al carrello
-    </a>
-    <a (click)="addToFavourite()" class="btn btn-primary">Aggiungi ai Preferiti</a>
+  <div class="card christmas-card ">
+    <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}" class="card-img-top">
+    <div class="card-body text-center">
+      <h5 class="card-title ">{{prodotto.titolo}}</h5>
+      <p class="card-text">{{prodotto.descrizione}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <div class="select">
+          <select [(ngModel)]="selectedQuantity" class="select-dropdown " >
+            <option *ngFor="let quantity of quantityOptions" [value]="quantity">
+              {{quantity}}
+            </option>
+          </select>
+          <p *ngIf="selectedQuantity" class="selected-quantity text-center my-2">Stai selezionando {{ selectedQuantity }} quantità di {{prodotto.titolo}} </p>
+        </div>
+      </li>
+      <li class="list-group-item">
+         <p class="prezzo">{{prodotto.prezzo}}€</p>
+      </li>
+      <li class="list-group-item">
+        <p class="rimanenti text-center"> Sono rimaste solo {{prodotto.quantita}} quantità disponibili</p>
+     </li>
+    </ul>
+    <div class="card-body container-btn">
+      <a (click)="toggleAll(); addToCart()" class="btn btn-primary me-2 button ">
+        Aggiungi al carrello
+      </a>
+      <a (click)="addToFavourite()" class="button">
+        Aggiungi ai Preferiti
+      </a>
+    </div>
   </div>
-  </div>
-  </div>
+</div>
+
 </div>
