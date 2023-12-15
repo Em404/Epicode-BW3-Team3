@@ -92,6 +92,7 @@ export class HeaderComponent {
   }
 
   handleRedirect(){
+    this.toggleShowNav();
     if (this.isLogged) {
       this.authService.logout();
     } else {

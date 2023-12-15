@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { PreferitiComponent } from './pages/preferiti/preferiti.component';
 import { ProdottoComponent } from './pages/prodotto/prodotto.component';
-import { CartComponent } from './components/cart/cart.component';
 import { FormComponent } from './pages/form/form.component';
 import { LoginGuard } from './pages/auth/login.guard';
 import { AuthGuard } from './pages/auth/auth.guard';
