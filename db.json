@@ -14,12 +14,11 @@
       "id": 1
     },
     {
-      "email": "alessandromind94@gmail.com",
-      "password": "$2a$10$AXsnJqDlGd3M/knmh/cifOiwuodTqMLGMGcVw8T3wCRFfDoo7.QjC",
       "nome": "Alessandro",
       "cognome": "Forestiero",
       "username": "etutor11",
-      "data-di-nascita": "2010-10-20",
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$qTJ6gQ8WggWnd6w6Lf2IKuQOpjjl1zuStkJpwgp5cdEY5WPLkjzbm",
       "genere": "uomo",
       "id": 2
     },
@@ -32,44 +31,27 @@
       "data-di-nascita": "1212-12-12",
       "genere": "web-developer",
       "id": 3
+    },
+    {
+      "email": "alessandromind20@gmail.com",
+      "password": "$2a$10$czQdrmqHbrS5hKDV/kY3PecaA5p9274Z.OUCr14mso4lRRs/e2b5m",
+      "nome": "Alessandro",
+      "cognome": "Forestiero",
+      "username": "etutor11@promopa.it",
+      "data-di-nascita": "3433-04-23",
+      "genere": "donna",
+      "id": 4
     }
   ],
   "prodotti": [
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
-      "prezzo": 32323,
-      "quantita": 2,
+      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+      "titolo": "Corso Html+Css+Js",
+      "descrizione": "Corso di web development",
+      "prezzo": 1,
+      "quantita": 1,
       "id": 1
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 2
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "dcd",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 3
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "fdsadf",
-      "prezzo": 567,
-      "quantita": 345,
-      "id": 4
     }
   ],
   "userProd": [
@@ -117,18 +99,33 @@
       ],
       "userId": 2,
       "id": 3
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+          "titolo": "Corso Html+Css+Js",
+          "descrizione": "Corso di web development",
+          "prezzo": 1,
+          "quantita": 1,
+          "id": 0
+        }
+      ],
+      "userId": 4,
+      "id": 4
     }
   ],
   "email": [],
   "preferiti": [
     {
       "totalPrice": 0,
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "fdsadf",
-      "prezzo": 567,
-      "quantita": 345,
-      "id": 4
+      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+      "titolo": "Corso Html+Css+Js",
+      "descrizione": "Corso di web development",
+      "prezzo": 1,
+      "quantita": 1,
+      "id": 1
     }
   ]
 }
