@@ -4,143 +4,61 @@
   },
   "users": [
     {
-      "nome": "michelino ",
-      "cognome": "samuele",
-      "username": "mikimiki",
-      "email": "samueletoscano@hotmail.com",
-      "password": "$2a$10$cAiTtK.XgawXeVn0qbsse.QsskqI3RgEUwawiaDqvBV2LTvWMltWS",
-      "genere": "non-binary",
-      "id": 1
-    },
-    {
-      "nome": "Alessandro",
-      "cognome": "Forestiero",
-      "username": "etutor11",
-      "email": "alessandromind94@gmail.com",
-      "password": "$2a$10$qTJ6gQ8WggWnd6w6Lf2IKuQOpjjl1zuStkJpwgp5cdEY5WPLkjzbm",
-      "genere": "uomo",
-      "id": 2
-    },
-    {
-      "email": "g@g.it",
-      "password": "$2a$10$mQR2LI33ZFXdqEYP6.I6GukeA0pUOcL81nsAHdyngluhxMMbJmxa2",
-      "nome": "zio",
-      "cognome": "cantante",
-      "username": "ziocantante55",
-      "data-di-nascita": "1212-12-12",
-      "genere": "web-developer",
-      "id": 3
-    },
-    {
-      "email": "emanuele@gmail.com",
-      "password": "$2a$10$ipJcI2O2wzLqqEAqad8hE.PNM4Zs.Jv5RUZY.G58TxBRKG4UkuEFG",
+      "email": "emanuele@email.com",
+      "password": "$2a$10$6w.S5tQYrJfUhjG8MfrqBeJ6rcdoHfRc.HuM24nypNeLmLGvub.yS",
       "nome": "Emanuele",
       "cognome": "Macchiarulo",
-      "username": "macchia",
+      "username": "Macchia",
       "data-di-nascita": "1998-04-23",
       "genere": "web-developer",
-      "id": 4
+      "id": 1
     }
   ],
   "prodotti": [
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "btht ny",
-      "prezzo": 32323,
-      "quantita": 2,
+      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+      "titolo": "Corso Front End Developer Brutale",
+      "descrizione": "Corso Front End Developer Brutale",
+      "prezzo": 1.99,
+      "quantita": 1,
       "id": 1
     },
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
-      "prezzo": 32323,
-      "quantita": 2,
+      "img": "https://pbs.twimg.com/media/Bz_7dWvIQAAi2R-.jpg",
+      "titolo": "Sorriso falso",
+      "descrizione": "ridi ridi",
+      "prezzo": 1,
+      "quantita": 100,
       "id": 2
     },
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "dcd",
-      "prezzo": 32323,
-      "quantita": 2,
+      "img": "https://image.spreadshirtmedia.net/image-server/v1/products/T1459A839PA4459PT28D168342790W10000H9000/views/1,width=378,height=378,appearanceId=839,backgroundColor=F2F2F2/dabbing-divertente-babbo-natale-regalo-di-babbo-natale.jpg",
+      "titolo": "Babbo Dubbale",
+      "descrizione": "babbone",
+      "prezzo": 2.99,
+      "quantita": 10,
       "id": 3
     },
     {
       "totalPrice": 0,
-      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-      "titolo": "pizza",
-      "descrizione": "fdsadf",
-      "prezzo": 567,
-      "quantita": 345,
+      "img": "https://leganerd.com/wp-content/uploads/2020/05/Fi-M-The-Origins-Of-Goofy-480i60-999x562.jpg",
+      "titolo": "Pippo",
+      "descrizione": "Non solo puoi, ma DEVI chiamarlo Pippo",
+      "prezzo": 20.99,
+      "quantita": 20,
       "id": 4
     },
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "Test macchia",
-      "descrizione": "test",
-      "prezzo": 1,
-      "quantita": 1,
+      "img": "https://cdn1.whatabeer.com/beers/details/mario-rossi.png",
+      "titolo": "Birra Mario Rossi",
+      "descrizione": "Sto Mario Rossi sta da per tutto",
+      "prezzo": 5.99,
+      "quantita": 10,
       "id": 5
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "pallone da calcio ",
-      "descrizione": "Molto aderente ",
-      "prezzo": 10,
-      "quantita": 20,
-      "id": 6
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jp",
-      "titolo": "pallone da calcio ",
-      "descrizione": "dcddcscds",
-      "prezzo": 10,
-      "quantita": 2222,
-      "id": 7
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-3-2150845600.jp",
-      "titolo": "pallone da calcio ",
-      "descrizione": "dcddcscds",
-      "prezzo": 10,
-      "quantita": 2222,
-      "id": 8
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-      "titolo": "pallone da calcio ",
-      "descrizione": "dcddcscds",
-      "prezzo": 10,
-      "quantita": 2222,
-      "id": 9
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-      "titolo": "pallone da calcio ",
-      "descrizione": "dcddcscds",
-      "prezzo": 10,
-      "quantita": 2222,
-      "id": 10
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845",
-      "titolo": "pallone da calcio ",
-      "descrizione": "wdfwefew",
-      "prezzo": 10,
-      "quantita": 1,
-      "id": 11
     }
   ],
   "userProd": [
@@ -148,11 +66,11 @@
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "bellloeeffec",
-          "descrizione": "btht ny",
-          "prezzo": 32323,
-          "quantita": 2,
+          "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+          "titolo": "Corso Front End Developer Brutale",
+          "descrizione": "Corso Front End Developer Brutale",
+          "prezzo": 1.99,
+          "quantita": 1,
           "id": 0
         }
       ],
@@ -163,11 +81,11 @@
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "bellloeeffec",
-          "descrizione": "ciao bello",
-          "prezzo": 25,
-          "quantita": 2,
+          "img": "https://pbs.twimg.com/media/Bz_7dWvIQAAi2R-.jpg",
+          "titolo": "Sorriso falso",
+          "descrizione": "ridi ridi",
+          "prezzo": 1,
+          "quantita": 100,
           "id": 0
         }
       ],
@@ -178,185 +96,58 @@
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-          "titolo": "pizza",
-          "descrizione": "fdsadf",
-          "prezzo": 567,
-          "quantita": 345,
+          "img": "https://image.spreadshirtmedia.net/image-server/v1/products/T1459A839PA4459PT28D168342790W10000H9000/views/1,width=378,height=378,appearanceId=839,backgroundColor=F2F2F2/dabbing-divertente-babbo-natale-regalo-di-babbo-natale.jpg",
+          "titolo": "Babbo Dubbale",
+          "descrizione": "babbone",
+          "prezzo": 2.99,
+          "quantita": 10,
           "id": 0
         }
       ],
-      "userId": 2,
+      "userId": 1,
       "id": 3
     },
     {
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "Test macchia",
-          "descrizione": "test",
-          "prezzo": 1,
-          "quantita": 1,
+          "img": "https://leganerd.com/wp-content/uploads/2020/05/Fi-M-The-Origins-Of-Goofy-480i60-999x562.jpg",
+          "titolo": "Pippo",
+          "descrizione": "Non solo puoi, ma DEVI chiamarlo Pippo",
+          "prezzo": 20.99,
+          "quantita": 20,
           "id": 0
         }
       ],
-      "userId": 4,
+      "userId": 1,
       "id": 4
     },
     {
       "prodotti": [
         {
           "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jp",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
+          "img": "https://cdn1.whatabeer.com/beers/details/mario-rossi.png",
+          "titolo": "Birra Mario Rossi",
+          "descrizione": "Sto Mario Rossi sta da per tutto",
+          "prezzo": 5.99,
+          "quantita": 10,
           "id": 0
         }
       ],
       "userId": 1,
       "id": 5
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-3-2150845600.jp",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-3-2150845600.jp",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 7
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        },
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-",
-          "titolo": "pallone da calcio ",
-          "descrizione": "dcddcscds",
-          "prezzo": 10,
-          "quantita": 2222,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 8
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845",
-          "titolo": "pallone da calcio ",
-          "descrizione": "wdfwefew",
-          "prezzo": 10,
-          "quantita": 1,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 9
     }
   ],
-  "email": [
-    {
-      "id": 1
-    }
-  ],
+  "email": [],
   "preferiti": [
     {
       "totalPrice": 0,
-      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
-      "titolo": "Corso Html+Css+Js",
-      "descrizione": "Corso di web development",
-      "prezzo": 1,
-      "quantita": 1,
-      "id": 1
-    },
-    {
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffe",
-      "descrizione": "df tvg",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 2
+      "img": "https://cdn1.whatabeer.com/beers/details/mario-rossi.png",
+      "titolo": "Birra Mario Rossi",
+      "descrizione": "Sto Mario Rossi sta da per tutto",
+      "prezzo": 5.99,
+      "quantita": 10,
+      "id": 5
     }
   ]
 }

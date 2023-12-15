@@ -36,7 +36,8 @@ export class FormComponent {
       private router:Router,
       private authService:AuthService
        ) {}
-    urlImage: RegExp = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
+    // urlImage: RegExp = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/
+    urlImage: RegExp = /(http)?s?:?([^"']*.(?:png|jpg|jpeg|gif|png|svg))/
 
     ngOnInit(){
 
@@ -72,7 +73,7 @@ export class FormComponent {
           this.inviaDatiAlServer();
         this.addToMyProducts()
       } else{
-        Swal.fire(`Sistema l'url o aumenta la quantità del prodotto almeno ad 1`)
+        Swal.fire(`URL non valido`)
       }
 
 
