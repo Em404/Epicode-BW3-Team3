@@ -23,13 +23,13 @@
       "id": 2
     },
     {
-      "email": "alessandromind47@gmail.com",
-      "password": "$2a$10$DcHln4JktjEVKbKkTAGWzeDMdCm6B9/Dg6e0GCHYL8lhrYBhgHGzS",
-      "nome": "Alessandro",
-      "cognome": "Forestiero",
-      "username": "etutor12",
-      "data-di-nascita": "2020-02-10",
-      "genere": "uomo",
+      "email": "g@g.it",
+      "password": "$2a$10$mQR2LI33ZFXdqEYP6.I6GukeA0pUOcL81nsAHdyngluhxMMbJmxa2",
+      "nome": "zio",
+      "cognome": "cantante",
+      "username": "ziocantante55",
+      "data-di-nascita": "1212-12-12",
+      "genere": "web-developer",
       "id": 3
     }
   ],
@@ -122,12 +122,12 @@
   "preferiti": [
     {
       "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "dcd",
-      "prezzo": 32323,
-      "quantita": 2,
-      "id": 3
+      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
+      "titolo": "pizza",
+      "descrizione": "fdsadf",
+      "prezzo": 567,
+      "quantita": 345,
+      "id": 4
     }
   ]
 }

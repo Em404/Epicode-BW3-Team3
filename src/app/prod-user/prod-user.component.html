@@ -1,4 +1,4 @@
-<h2 class="text-center"> I MIEI PRODOTTI </h2>
+<!-- <h2 class="text-center"> I MIEI PRODOTTI </h2>
 <div class="row " *ngIf="produser.prodotti.length">
 
   <div class="card text-end col-6 p-0 " *ngFor="let prod of produser.prodotti" >
@@ -15,5 +15,28 @@
  <a routerLink="/" class="btn btn-success">Torna alla Home Page</a>
 </div>
 <div *ngIf="!produser.prodotti.length" class="alert alert-danger">
+  <p>Nessun prodotto trovato per questo utente.</p>
+</div> -->
+
+<h2 class="text-center fs-1" mt-2> I MIEI PRODOTTI </h2>
+<div class="row my-5" *ngIf="produser.prodotti" >
+  <div class="card-container col-6 p-0" *ngFor="let prod of produser.prodotti">
+    <img src="{{ prod.img }}" alt="{{ prod.titolo }}" class="card-image ">
+    <div class="card-body">
+      <h5 class="card-title">{{ prod.titolo }}</h5>
+      <p class="card-text">{{ prod.descrizione }}</p>
+      <p class="card-text price">Prezzo: {{ prod.prezzo }}</p>
+      <p class="card-text quantity">Quantità rimasta: {{ prod.quantita }}</p>
+      <div class="button-group">
+        <a  class="btn btn-primary" [routerLink]="'/prodotto/' + produser.id" >Vai alla pagina Prodotto</a>
+      </div>
+    </div>
+    <div class="remove-btn">
+      <a (click)="delete(produser.id); " class="btn btn-primary">Elimina Prodotto</a>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!produser.prodotti">
   <p>Nessun prodotto trovato per questo utente.</p>
 </div>

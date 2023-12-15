@@ -28,7 +28,8 @@
               </div>
               <div class="col-6 col-md-6">
                 <div class="card-body mt-4">
-                  <h5 class="card-title">{{ prod.titolo }}</h5>
+                  <h5 class="card-title-cart">{{ prod.titolo }}</h5>
+                  <p class="quantita"> x{{ prod.quantita }}</p>
                   <p class="card-text">Total Price: {{ prod.totalPrice }}</p>
                   <div class="d-flex">
                     <a (click)="add(prod)" class="btn btn-success me-2 px-3"

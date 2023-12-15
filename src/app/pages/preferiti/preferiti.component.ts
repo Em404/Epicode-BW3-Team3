@@ -44,9 +44,11 @@ export class PreferitiComponent implements OnInit {
       if (prod.titolo) {
         Swal.fire(`Hai rimosso correttamente ${prod.titolo} dai tuoi preferiti`);
         this.preferiti = this.preferiti.filter(pref => pref.id !== id);
+        localStorage.setItem("preferiti", JSON.stringify(this.preferiti))
       } else {
         Swal.fire(`Hai rimosso correttamente questo prodotto dai tuoi preferiti`);
         this.preferiti = this.preferiti.filter(pref => pref.id !== id);
+        localStorage.setItem("preferiti", JSON.stringify(this.preferiti))
       }
     });
   }
