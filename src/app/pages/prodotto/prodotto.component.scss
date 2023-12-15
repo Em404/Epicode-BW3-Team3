@@ -36,14 +36,16 @@ ng-touched{
   margin-bottom: 15px;
 
 }
-
+.select-dropdown{
+  background-color: #570D02;
+}
 .christmas-card .select select {
   width: 100%;
   padding: 8px;
   border: 1px solid #cd8064;
   border-radius: 5px;
-  background-color: #ead5ab;
-  color: #000000;
+  background: linear-gradient(to bottom,#570D02,#8C1502);
+  color: white;
   font-weight: bold;
   padding: 5px 10px;
 }

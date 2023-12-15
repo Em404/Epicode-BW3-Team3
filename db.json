@@ -45,11 +45,11 @@
   "prodotti": [
     {
       "totalPrice": 0,
-      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
-      "titolo": "Corso Html+Css+Js",
-      "descrizione": "Corso di web development",
-      "prezzo": 1,
-      "quantita": 1,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "bellloeeffec",
+      "descrizione": "btht ny",
+      "prezzo": 32323,
+      "quantita": 2,
       "id": 1
     }
   ],
@@ -59,8 +59,8 @@
         {
           "totalPrice": 0,
           "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "bellloeeffe",
-          "descrizione": "df tvg",
+          "titolo": "bellloeeffec",
+          "descrizione": "btht ny",
           "prezzo": 32323,
           "quantita": 2,
           "id": 0
@@ -68,51 +68,6 @@
       ],
       "userId": 1,
       "id": 1
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-          "titolo": "bellloeeffec",
-          "descrizione": "dcd",
-          "prezzo": 32323,
-          "quantita": 2,
-          "id": 0
-        }
-      ],
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
-          "titolo": "pizza",
-          "descrizione": "fdsadf",
-          "prezzo": 567,
-          "quantita": 345,
-          "id": 0
-        }
-      ],
-      "userId": 2,
-      "id": 3
-    },
-    {
-      "prodotti": [
-        {
-          "totalPrice": 0,
-          "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
-          "titolo": "Corso Html+Css+Js",
-          "descrizione": "Corso di web development",
-          "prezzo": 1,
-          "quantita": 1,
-          "id": 0
-        }
-      ],
-      "userId": 4,
-      "id": 4
     }
   ],
   "email": [],
