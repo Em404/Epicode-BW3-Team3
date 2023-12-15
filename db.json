@@ -14,14 +14,6 @@
       "id": 1
     },
     {
-<<<<<<< HEAD
-      "totalPrice": 0,
-      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "dcd",
-      "prezzo": 32323,
-      "quantita": 2,
-=======
       "email": "alessandromind94@gmail.com",
       "password": "$2a$10$AXsnJqDlGd3M/knmh/cifOiwuodTqMLGMGcVw8T3wCRFfDoo7.QjC",
       "nome": "Alessandro",
@@ -39,7 +31,6 @@
       "username": "ziocantante55",
       "data-di-nascita": "1212-12-12",
       "genere": "web-developer",
->>>>>>> 8a039f14c7f154df59fe55272bf076350b68830f
       "id": 3
     }
   ],
