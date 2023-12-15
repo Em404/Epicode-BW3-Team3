@@ -33,12 +33,11 @@
       "id": 3
     },
     {
-      "email": "alessandromind20@gmail.com",
-      "password": "$2a$10$czQdrmqHbrS5hKDV/kY3PecaA5p9274Z.OUCr14mso4lRRs/e2b5m",
       "nome": "Alessandro",
       "cognome": "Forestiero",
       "username": "etutor11@promopa.it",
-      "data-di-nascita": "3433-04-23",
+      "email": "alessandromind20@gmail.com",
+      "password": "$2a$10$AiwXWBbs1jgOqqyyAUcjaOgeG7dtFxrBC/f9j/tvgEiuixz6SeyzW",
       "genere": "donna",
       "id": 4
     }

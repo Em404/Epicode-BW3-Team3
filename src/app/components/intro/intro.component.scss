@@ -1,0 +1,76 @@
+
+
+section {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content:center;
+  gap: 40px;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+section h2 {
+  font-weight: bold;
+  font-size: 6rem;
+  font-family:monospace
+}
+
+section div {
+  transform: rotate(-4deg);
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-out;
+  animation: slap-in 1s forwards; /* Aggiunto "forwards" per mantenere le proprietà finali dell'animazione */
+  opacity: 0; /* Impostato a 0 all'inizio */
+}
+
+section div:nth-child(even) {
+  transform: rotate(4deg);
+}
+
+section div:nth-child(1n) {
+  animation-delay: 0.3s;
+}
+
+section div:nth-child(2n) {
+  animation-delay: 1s;
+}
+
+section div:nth-child(3n) {
+  transform: rotate(10deg);
+  animation-delay: 2s;
+}
+
+section div:hover {
+  transform: scale(1.15);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  cursor: pointer;
+}
+
+@keyframes slap-in {
+  0% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(10);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
