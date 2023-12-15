@@ -32,6 +32,16 @@
       "data-di-nascita": "1212-12-12",
       "genere": "web-developer",
       "id": 3
+    },
+    {
+      "email": "emanuele@gmail.com",
+      "password": "$2a$10$ipJcI2O2wzLqqEAqad8hE.PNM4Zs.Jv5RUZY.G58TxBRKG4UkuEFG",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
+      "id": 4
     }
   ],
   "prodotti": [
@@ -70,6 +80,15 @@
       "prezzo": 567,
       "quantita": 345,
       "id": 4
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "Test macchia",
+      "descrizione": "test",
+      "prezzo": 1,
+      "quantita": 1,
+      "id": 5
     }
   ],
   "userProd": [
@@ -117,6 +136,21 @@
       ],
       "userId": 2,
       "id": 3
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "Test macchia",
+          "descrizione": "test",
+          "prezzo": 1,
+          "quantita": 1,
+          "id": 0
+        }
+      ],
+      "userId": 4,
+      "id": 4
     }
   ],
   "email": [],
