@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProdUserComponent } from './prod-user/prod-user.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +27,7 @@ import { ProdUserComponent } from './prod-user/prod-user.component';
     CartComponent,
     FooterComponent,
     ProdUserComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
