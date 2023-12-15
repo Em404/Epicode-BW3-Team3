@@ -32,12 +32,13 @@
       "id": 3
     },
     {
-      "nome": "Alessandro",
-      "cognome": "Forestiero",
-      "username": "etutor11@promopa.it",
-      "email": "alessandromind20@gmail.com",
-      "password": "$2a$10$AiwXWBbs1jgOqqyyAUcjaOgeG7dtFxrBC/f9j/tvgEiuixz6SeyzW",
-      "genere": "donna",
+      "email": "emanuele@gmail.com",
+      "password": "$2a$10$ipJcI2O2wzLqqEAqad8hE.PNM4Zs.Jv5RUZY.G58TxBRKG4UkuEFG",
+      "nome": "Emanuele",
+      "cognome": "Macchiarulo",
+      "username": "macchia",
+      "data-di-nascita": "1998-04-23",
+      "genere": "web-developer",
       "id": 4
     }
   ],
@@ -54,11 +55,38 @@
     {
       "totalPrice": 0,
       "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
-      "titolo": "bellloeeffec",
-      "descrizione": "ciao bello",
-      "prezzo": 25,
+      "titolo": "bellloeeffe",
+      "descrizione": "df tvg",
+      "prezzo": 32323,
       "quantita": 2,
       "id": 2
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "bellloeeffec",
+      "descrizione": "dcd",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 3
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
+      "titolo": "pizza",
+      "descrizione": "fdsadf",
+      "prezzo": 567,
+      "quantita": 345,
+      "id": 4
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "Test macchia",
+      "descrizione": "test",
+      "prezzo": 1,
+      "quantita": 1,
+      "id": 5
     }
   ],
   "userProd": [
@@ -91,8 +119,48 @@
       ],
       "userId": 1,
       "id": 2
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://www.giallozafferano.it/images/249-24919/Pizza-napoletana_450x300.jpg",
+          "titolo": "pizza",
+          "descrizione": "fdsadf",
+          "prezzo": 567,
+          "quantita": 345,
+          "id": 0
+        }
+      ],
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+          "titolo": "Test macchia",
+          "descrizione": "test",
+          "prezzo": 1,
+          "quantita": 1,
+          "id": 0
+        }
+      ],
+      "userId": 4,
+      "id": 4
     }
   ],
   "email": [],
-  "preferiti": []
+  "preferiti": [
+    {
+      "totalPrice": 0,
+      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+      "titolo": "Corso Html+Css+Js",
+      "descrizione": "Corso di web development",
+      "prezzo": 1,
+      "quantita": 1,
+      "id": 1
+    }
+  ]
 }

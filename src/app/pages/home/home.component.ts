@@ -10,9 +10,9 @@ import { IProducts } from './models/i-products';
 export class HomeComponent {
 
   items: string[] = [
-    '../../../assets/carousel/albero.jpg',
-    '../../../assets/carousel/sorprendi.jpg',
-    '../../../assets/carousel/crea.jpg',
+    '../../../assets/carousel/albero-txt.jpg',
+    '../../../assets/carousel/sorprendi-txt.jpg',
+    '../../../assets/carousel/crea-txt.jpg',
     '../../../assets/brutale.png'
   ];
 
@@ -51,7 +51,7 @@ export class HomeComponent {
   startCarosello(){
     setInterval(() => {
       this.toggleActive();
-    }, 3000)
+    }, 5000)
   }
 
   toggleActive() {
