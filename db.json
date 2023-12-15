@@ -14,14 +14,23 @@
       "id": 1
     },
     {
-      "email": "alessandromind94@gmail.com",
-      "password": "$2a$10$AXsnJqDlGd3M/knmh/cifOiwuodTqMLGMGcVw8T3wCRFfDoo7.QjC",
       "nome": "Alessandro",
       "cognome": "Forestiero",
       "username": "etutor11",
-      "data-di-nascita": "2010-10-20",
+      "email": "alessandromind94@gmail.com",
+      "password": "$2a$10$qTJ6gQ8WggWnd6w6Lf2IKuQOpjjl1zuStkJpwgp5cdEY5WPLkjzbm",
       "genere": "uomo",
       "id": 2
+    },
+    {
+      "email": "alessandromind47@gmail.com",
+      "password": "$2a$10$DcHln4JktjEVKbKkTAGWzeDMdCm6B9/Dg6e0GCHYL8lhrYBhgHGzS",
+      "nome": "Alessandro",
+      "cognome": "Forestiero",
+      "username": "etutor12",
+      "data-di-nascita": "2020-02-10",
+      "genere": "uomo",
+      "id": 3
     }
   ],
   "prodotti": [

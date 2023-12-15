@@ -1,3 +1,6 @@
+.bg-pref{
+  background-color: #f4deb2;
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -10,8 +13,8 @@
   max-width: 300px;
   margin: 1rem;
   overflow: hidden;
-  box-shadow: 0px 0px 10px 5px red;
-  background-color: #f4deb2;
+  box-shadow: 0px 0px 10px 5px black;
+
   border-radius: 10px;
   transition: max-height 0.3s ease;
   .card-image {

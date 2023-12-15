@@ -1,18 +1,19 @@
-
+<div class="bg-pref">
 <div class="row">
-  <div class="card-container col-6" *ngFor="let pref of preferiti">
-    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image">
+  <div class="card-container col-6 bg-danger" *ngFor="let pref of preferiti">
+    <img src="{{ pref.img }}" alt="{{ pref.titolo }}" class="card-image mt-2">
     <div class="card-body">
       <h5 class="card-title">{{ pref.titolo }}</h5>
       <p class="card-text">{{ pref.descrizione }}</p>
       <p class="card-text price">Prezzo: {{ pref.prezzo }}</p>
       <p class="card-text quantity">Quantità rimasta: {{ pref.quantita }}</p>
       <div class="button-group">
-        <a class="btn btn-primary">Vai alla pagina Prodotto</a>
+        <a class="button">Vai alla pagina Prodotto</a>
       </div>
     </div>
-    <div class="remove-btn">
-      <button class="btn btn-danger" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
+    <div class="remove-btn ">
+      <button class="button" (click)="RemoveFromFavourite(pref.id)">Rimuovi dai Preferiti</button>
     </div>
   </div>
+</div>
 </div>
