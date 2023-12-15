@@ -19,7 +19,7 @@
                   {{quantity}}
                 </option>
               </select>
-              <p *ngIf="selectedQuantity" class="selected-quantity text-center my-2">Stai selezionando {{ selectedQuantity }} quantità di {{prodotto.titolo}} </p>
+              <p *ngIf="selectedQuantity" class="selected-quantity text-center my-2">Stai selezionando <span class="quantity">{{ selectedQuantity }}</span> quantità di {{prodotto.titolo}} </p>
             </div>
           </li>
           <li class="list-group-item">

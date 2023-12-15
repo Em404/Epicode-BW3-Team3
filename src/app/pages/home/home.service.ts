@@ -10,9 +10,18 @@ import { IProducts } from './models/i-products';
 export class HomeService {
   prodUrl:string = 'http://localhost:3000/prodotti'
   prefUrl:string = 'http://localhost:3000/preferiti'
+  mostraPagina = true;
 
   constructor(private http:HttpClient) {}
 
+
+  mostraSezione(): boolean {
+    return this.mostraPagina;
+  }
+
+  nascondiSezione() {
+    this.mostraPagina = false;
+  }
   getAllProducts():Observable<IProducts[]>{
    return  this.http.get<IProducts[]>(this.prodUrl)
   }

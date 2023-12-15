@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { HomeService } from './pages/home/home.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bw3-app';
-  mostraPagina = true;
+  // mostraPagina:boolean  =true
+  constructor(protected homeService:HomeService) {
+  }
 
-  constructor() {
+  ngOnInit(){
+
     setTimeout(() => {
-      this.mostraPagina = false;
+      this.homeService.nascondiSezione();
     }, 4500);
   }
 }
