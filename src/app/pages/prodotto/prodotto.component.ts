@@ -15,7 +15,7 @@ import { ProdUserService } from '../../prod-user/prod-user.service';
 })
 export class ProdottoComponent implements OnInit {
   cart: IProducts[] = []
-
+isMobile:boolean  = true
   constructor(
     private route: ActivatedRoute,
     private homeService: HomeService,

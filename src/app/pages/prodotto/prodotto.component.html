@@ -1,39 +1,45 @@
-<div class="productPage">
-  <div class="container py-4 ">
 
-  <div class="card christmas-card ">
-    <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}" class="card-img-top">
-    <div class="card-body text-center">
-      <h5 class="card-title ">{{prodotto.titolo}}</h5>
-      <p class="card-text">{{prodotto.descrizione}}</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <div class="select">
-          <select [(ngModel)]="selectedQuantity" class="select-dropdown " >
-            <option *ngFor="let quantity of quantityOptions" [value]="quantity">
-              {{quantity}}
-            </option>
-          </select>
-          <p *ngIf="selectedQuantity" class="selected-quantity text-center my-2">Stai selezionando {{ selectedQuantity }} quantità di {{prodotto.titolo}} </p>
+
+<div class="container py-4" *ngIf="isMobile">
+  <div class="card christmas-card">
+    <div class="row g-0">
+      <div class="col-lg-4">
+        <img src="{{prodotto.img}}" alt="{{prodotto.titolo}}" class="card-img-top">
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body text-center">
+          <h5 class="card-title text-white">{{prodotto.titolo}}</h5>
+          <p class="card-text text-white">{{prodotto.descrizione}}</p>
         </div>
-      </li>
-      <li class="list-group-item">
-         <p class="prezzo">{{prodotto.prezzo}}€</p>
-      </li>
-      <li class="list-group-item">
-        <p class="rimanenti text-center"> Sono rimaste solo {{prodotto.quantita}} quantità disponibili</p>
-     </li>
-    </ul>
-    <div class="card-body container-btn">
-      <a (click)="toggleAll(); addToCart()" class="btn btn-primary me-2 button ">
-        Aggiungi al carrello
-      </a>
-      <a (click)="addToFavourite()" class="button">
-        Aggiungi ai Preferiti
-      </a>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="select">
+              <select [(ngModel)]="selectedQuantity" class="select-dropdown">
+                <option *ngFor="let quantity of quantityOptions" [value]="quantity">
+                  {{quantity}}
+                </option>
+              </select>
+              <p *ngIf="selectedQuantity" class="selected-quantity text-center my-2">Stai selezionando {{ selectedQuantity }} quantità di {{prodotto.titolo}} </p>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <p class="prezzo">{{prodotto.prezzo}}€</p>
+          </li>
+          <li class="list-group-item">
+            <p class="rimanenti text-center"> Sono rimaste solo {{prodotto.quantita}} quantità disponibili</p>
+          </li>
+        </ul>
+        <div class="card-body container-btn">
+          <a (click)="toggleAll(); addToCart()" class="btn btn-primary me-2 button">
+            Aggiungi al carrello
+          </a>
+          <a (click)="addToFavourite()" class="button">
+            Aggiungi ai Preferiti
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-</div>
+

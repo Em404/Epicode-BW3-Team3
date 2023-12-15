@@ -87,6 +87,15 @@
       "prezzo": 1,
       "quantita": 1,
       "id": 5
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "pallone da calcio ",
+      "descrizione": "Molto aderente ",
+      "prezzo": 10,
+      "quantita": 20,
+      "id": 6
     }
   ],
   "userProd": [
@@ -151,7 +160,11 @@
       "id": 4
     }
   ],
-  "email": [],
+  "email": [
+    {
+      "id": 1
+    }
+  ],
   "preferiti": [
     {
       "totalPrice": 0,
@@ -161,6 +174,15 @@
       "prezzo": 1,
       "quantita": 1,
       "id": 1
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845600.jpg",
+      "titolo": "bellloeeffe",
+      "descrizione": "df tvg",
+      "prezzo": 32323,
+      "quantita": 2,
+      "id": 2
     }
   ]
 }
