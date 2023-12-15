@@ -36,14 +36,13 @@ export class ProdUserComponent implements OnInit {
           this.ProduserArr = prodUser
           prodUser.map((prod:ProdUserId) => {
             this.produser = prod
-            prod.prodotti.map(singleProd =>{
-             this.prodotto = singleProd
+
             })
           });
         },
       );
-    });
-  }
+    }
+
 
 
     delete(id: number): void {
