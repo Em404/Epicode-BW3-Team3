@@ -3,3 +3,8 @@
 <app-cart></app-cart>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+<div class="chat" *ngIf="IsCliccked" (click)="mostraChat()">
+  <i  class="fa-solid fa-comment" ></i>
+  <p class="chatta"> Chatta con coi </p>
+</div>
+<app-chat *ngIf="!IsCliccked"></app-chat>

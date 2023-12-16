@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProdUserComponent } from './prod-user/prod-user.component';
 import { IntroComponent } from './components/intro/intro.component';
+import { ChatComponent } from './chat/chat.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { IntroComponent } from './components/intro/intro.component';
     CartComponent,
     FooterComponent,
     ProdUserComponent,
-    IntroComponent
+    IntroComponent,
+    ChatComponent
     ],
   imports: [
     BrowserModule,
