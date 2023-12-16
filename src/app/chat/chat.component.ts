@@ -14,35 +14,32 @@ export class ChatComponent {
   answer:boolean = true;
 messagge:string = ''
 response:string = ''
-chatUrl:string = 'https://api.openai.com/v1/chat/completions'
-apyKey:string  = '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'
+chatUrl:string = 'https://api.openai.com/v1/images/generations'
+apyKey:string  = ''
 constructor(private http:HttpClient){}
 body!:any
 
 callChat(){
   this.loading = true
     this.body = {
-      "model": "gpt-3.5-turbo",
-      "messages": [
-        {
-          "role": "system",
-          "content": "You are a helpful assistant."
-        },
-        {
-          "role": "user",
-          "content": this.messagge || ''
-        }
-      ]
+      "model": "dall-e-3",
+      "prompt": this.messagge,
+      "n": 1,
+      "size": "1024x1024"
     }
+
+
     this.http.post<ChatResponse>(this.chatUrl,this.body,
       { headers:{
         "Content-Type": "application/json",
         "Authorization": `Bearer ${this.apyKey}`
       }
       }).subscribe((data:ChatResponse) => {
+        console.log(data);
+
         this.loading = false
 
-        this.response = data.choices[0].message.content || ''
+        this.response = data.data[0].url || ''
         this.answer = false
 
       })

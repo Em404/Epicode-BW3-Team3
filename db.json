@@ -31,6 +31,15 @@
       "data-di-nascita": "2023-12-22",
       "genere": "non-binary",
       "id": 3
+    },
+    {
+      "nome": "samuele",
+      "cognome": "tripoli",
+      "username": "ginevra23",
+      "email": "ginevratripoli@icloud.com",
+      "password": "$2a$10$nbLBB1g7AWu5S8adLDNype1AlRqRSd.59.Nr.JY2y1KYeh0WiHLuC",
+      "genere": "donna",
+      "id": 4
     }
   ],
   "prodotti": [
@@ -114,6 +123,15 @@
       "prezzo": 10,
       "quantita": 1,
       "id": 9
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://img.freepik.com/free-photo/close-up-athlete-playing-soccer_23-2150845.jpg",
+      "titolo": "pallone da calcio",
+      "descrizione": "pallone bello",
+      "prezzo": 10,
+      "quantita": 1,
+      "id": 10
     }
   ],
   "userProd": [
@@ -211,6 +229,9 @@
   "email": [
     {
       "id": 1
+    },
+    {
+      "id": 2
     }
   ],
   "preferiti": []
