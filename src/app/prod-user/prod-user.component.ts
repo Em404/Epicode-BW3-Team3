@@ -27,19 +27,24 @@ export class ProdUserComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+
     this.route.params.subscribe((params: any) => {
       this.userId = params.userId;
 
       this.prodUser.getByUserId(this.userId).subscribe(
         (prodUser: ProdUserId[]) => {
+          this.ProduserArr = prodUser
 
           this.ProduserArr = prodUser
           prodUser.map((prod:ProdUserId) => {
-            this.produser = prod
+            console.log(prod);
 
-            })
-          });
-        },
+            this.produser = prod
+            this.ProduserArr.push(prod)
+            console.log(this.produser.prodotti);
+          })
+        });
+      },
       );
     }
 

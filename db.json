@@ -172,8 +172,7 @@
       "id": 6
     }
   ],
-  "email": [],
-  "preferiti": [
+  "email": [
     {
       "totalPrice": 0,
       "img": "https://cdn1.whatabeer.com/beers/details/mario-rossi.png",
@@ -192,5 +191,6 @@
       "quantita": 1,
       "id": 1
     }
-  ]
+  ],
+  "preferiti": []
 }

@@ -9,10 +9,12 @@ import { HomeService } from './pages/home/home.service';
 })
 export class AppComponent {
   title = 'bw3-app';
-  // mostraPagina:boolean  =true
+  IsCliccked:boolean  = true
   constructor(protected homeService:HomeService) {
   }
-
+mostraChat(){
+  this.IsCliccked = false
+}
   ngOnInit(){
 
     setTimeout(() => {
