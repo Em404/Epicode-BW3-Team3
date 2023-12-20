@@ -44,7 +44,6 @@ export class ProdUserComponent implements OnInit {
     }
 
 
-
     delete(id: number): void {
 
       Swal.fire({

@@ -12,6 +12,16 @@
       "data-di-nascita": "1998-04-23",
       "genere": "web-developer",
       "id": 1
+    },
+    {
+      "email": "brutale@email.com",
+      "password": "$2a$10$z35WRz4vsTtFwBBkNkgCEOQbFzw.MRfhPG.v.m3FR9PYNsWnjCaSC",
+      "nome": "team",
+      "cognome": "brutale",
+      "username": "brutale",
+      "data-di-nascita": "2023-12-15",
+      "genere": "web-developer",
+      "id": 2
     }
   ],
   "prodotti": [
@@ -59,6 +69,15 @@
       "prezzo": 5.99,
       "quantita": 10,
       "id": 5
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+      "titolo": "test",
+      "descrizione": "pizza fantastica",
+      "prezzo": 5,
+      "quantita": 5,
+      "id": 6
     }
   ],
   "userProd": [
@@ -136,6 +155,21 @@
       ],
       "userId": 1,
       "id": 5
+    },
+    {
+      "prodotti": [
+        {
+          "totalPrice": 0,
+          "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/800px-Eq_it-na_pizza-margherita_sep2005_sml.jpg",
+          "titolo": "test",
+          "descrizione": "pizza fantastica",
+          "prezzo": 5,
+          "quantita": 5,
+          "id": 0
+        }
+      ],
+      "userId": 2,
+      "id": 6
     }
   ],
   "email": [],
@@ -148,6 +182,15 @@
       "prezzo": 5.99,
       "quantita": 10,
       "id": 5
+    },
+    {
+      "totalPrice": 0,
+      "img": "https://epicode.com/wp-content/uploads/2023/02/MICHELE-ARCANGELO-TEDESCO-150x150.png",
+      "titolo": "Corso Front End Developer Brutale",
+      "descrizione": "Corso Front End Developer Brutale",
+      "prezzo": 1.99,
+      "quantita": 1,
+      "id": 1
     }
   ]
 }

@@ -6,8 +6,8 @@
   <div class="d-flex justify-content-center">
     <h2 class="fs-1 button text-center pref-btn"> I MIEI PRODOTTI </h2>
   </div>
-  <div class="row" *ngIf="produser.prodotti">
-    <div class="card-container col-6 p-0 card-bg" *ngFor="let prod of produser.prodotti">
+  <div class="row" *ngFor="let user of ProduserArr">
+    <div class="card-container col-6 p-0 card-bg" *ngFor="let prod of user.prodotti">
       <img src="{{ prod.img }}" alt="{{ prod.titolo }}" class="card-image">
       <div class="card-body">
         <h5 class="card-title ">{{ prod.titolo }}</h5>
@@ -27,5 +27,4 @@
 
       </div>
     </div>
-
 
